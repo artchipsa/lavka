@@ -1,7 +1,9 @@
 <template lang="pug">
     .main
-        a(href="#")#menu
+        a(href="#" @click.prevent="showMenu")#menu
             span
+        transition(name="modal")
+            menulist(v-show="show_menu" show_menu="show_menu")
         .logo.main-logo
             include ../assets/logo.svg
             p.logo-text супермаркет отборных продуктов    
@@ -23,8 +25,15 @@
 </template>
 
 <script>
+
+     import menulist from '../components/menu.vue';
+
+
     export default {
         name: 'app',
+        components:{
+            menulist
+        },
         data(){
             return{
                 socials: [
@@ -83,7 +92,8 @@
                         url: '/shops'
                     }
                 ],
-                flow: ''
+                flow: '',
+                show_menu: false
             }
         },
         watch: {
@@ -104,6 +114,10 @@
             }
         },
         methods:{
+            showMenu(event){
+                this.show_menu = !this.show_menu;
+                document.querySelector('#menu').classList.toggle('active');
+            },
             mainLineAnimation(){
                 let step = 12.5;
                 let active = document.querySelector('.router-link-exact-active');
@@ -128,6 +142,15 @@
             
             this.uiColorChange();
             var self = this;
+
+
+            document.addEventListener('keyup', (e) => {
+				if (e.keyCode === 27){
+                    this.show_menu = false;
+                    document.querySelector('#menu').classList.remove('active');
+                    
+				}
+			});	
 
             //scroll
             let lastAnimation = 0;
@@ -250,6 +273,14 @@
     .owl-carousel .owl-stage-outer, .owl-carousel .owl-stage, .owl-item{
         height: 100%;
     }
+
+    .modal-enter-active, .modal-leave-active{
+		transition: all .35s ease-in-out;
+	}
+	.modal-enter, .modal-leave-to{
+		transform: translate3d(0,-100%,0);
+	}
+
     #menu{
         position: absolute;
         top: 28px;
@@ -258,10 +289,29 @@
         height: 5px;
         line-height: 100%;
         padding: 12px 0px;
-        z-index: 2;
+        z-index: 5;
         &.white{
             span{
                 background-color: #fff;
+            }
+        }
+        &:hover{
+            span{
+                width: 45px;
+                &:after{
+                    width: 45px;
+                }
+            }
+        }
+        &.active{
+            span{
+                transform: translateY(-50%) rotate(45deg);
+                width: 45px;                
+                &:after{
+                    width: 45px;                    
+                    transform: rotate(-90deg);
+                    bottom: 0px;
+                }
             }
         }
         span{
@@ -272,6 +322,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            transition: all .35s;
             &:after{
                 content: '';
                 position: absolute;
@@ -280,6 +331,7 @@
                 width: 30px;
                 height: 3px;
                 background-color: inherit;
+                transition: all .35s;                
             }
         }
     }
@@ -433,6 +485,14 @@
         }
     }
 
+    .small-title{
+        font-family: bebas;
+        font-weight: 800;
+        font-size: 20px;
+        color: $gray;
+        margin-bottom: 76px;
+    }
+
      .owl-dots{
         position: absolute;
         top: 3%;
@@ -467,6 +527,87 @@
             &:last-child{
                 margin-right: 0px;
             }
+        }
+    }
+
+    .inner-right-sidebar{
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        right: 10%;
+        width: 10%;
+        z-index: 2;
+        display: flex;
+        border-left: 1px solid $side-menu;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 42px;
+        padding-bottom: 72px;
+        .links-block{
+            ul{
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                li{
+                   margin-bottom: 28px;
+                   font-family: bebas;
+                   font-weight: 800;
+                   font-size: 16px;
+                   &.active{
+                       a{
+                           color: $brown;
+                       }
+                   }
+                   &:last-child{
+                       margin-bottom: 0px;
+                   }
+                   a{
+                       text-decoration: none;
+                       transition: all .35s;
+                       color: $side-menu;
+                       &:hover{
+                           color: $side-menu-hover;
+                       }
+                   }
+                }
+            }
+        }
+    }
+    .scroll-view {
+        /* -- Attention: This line is extremely important in chrome 55+! -- */
+        touch-action: none;
+        /* -- Attention-- */
+        position: absolute;
+        height: 75%;
+        width: 70%;
+        left: 54%;
+        padding: 0px 4%;
+        transform: translateX(-50%);
+        margin-top: 10%;
+        margin-bottom: 5%;
+        overflow: hidden;
+    }
+
+    .close{
+        transform: rotate(90deg);
+        width: 255px;
+        margin-top: 110px;
+        .icon{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 30px;
+            svg g use{
+                fill: #312217;
+            }
+        }
+        span{
+            vertical-align: middle;
+            display: inline-block;
+            font-family: bebas;
+            font-weight: 800;
+            font-size: 16px;
+            color: $gray;
         }
     }
 

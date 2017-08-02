@@ -4,7 +4,7 @@
             img.center-plate(src="../assets/woodplate.png", alt="")
             .owl-carousel.product-carousel
                 .item(v-for="product in products")
-                    a(v-bind:href="product.link")
+                    router-link(:to="product.link")
                         img(v-bind:src="product.img", v-bind:alt="product.name")
             .container
                 .owl-dots
@@ -29,96 +29,96 @@
         props:['flow', 'links'],
         data(){
             return{
-                color: '#D5DFDE',
+                color: '#FAF6EB',
                 owl: '',
                 _flow: '',
                 products:[
                     {
-                        name: 'плоды и растения',
+                        name: 'проды и растения',
                         img: 'src/assets/m1.png',
-                        category: 'vege',
-                        link: '#'
+                        category: 'veges',
+                        link: '/products/veges'
                     },
                     {
-                        name: 'Курочка',
+                        name: 'Рыба',
                         img: 'src/assets/m2.png',
-                        category: 'chick',
-                        link: '#'
+                        category: 'fishs',
+                        link: '/products/fishs'
                     },
                     {
-                        name: 'Бифштекс',
+                        name: 'Мясо, шашлыки',
                         img: 'src/assets/m3.png',
-                        category: 'beef',
-                        link: '#'
+                        category: 'meats',
+                        link: '/products/meats'
                     },
                     {
-                        name: 'Сосисочки',
+                        name: 'Салаты. Готовые блюда',
                         img: 'src/assets/m4.png',
-                        category: 'sausage',
-                        link: '#'
+                        category: 'salads',
+                        link: '/products/salads'
                     },
                     {
-                        name: 'Варенье',
+                        name: 'Запасы и заготовки',
                         img: 'src/assets/m5.png',
-                        category: 'jam',
-                        link: '#'
+                        category: 'jams',
+                        link: '/products/jams'
                     },
                     {
-                        name: 'Ягодки',
+                        name: 'Хлеб, выпечка, кондитерка',
                         img: 'src/assets/m6.png',
-                        category: 'berry',
-                        link: '#'
+                        category: 'breads',
+                        link: '/products/breads'
                     },
                     {
-                        name: 'Рыбка',
+                        name: 'Колбасы, деликатесы',
                         img: 'src/assets/m7.png',
-                        category: 'fish',
-                        link: '#'
+                        category: 'sausages',
+                        link: '/products/sausages'
                     },
                     {
-                        name: 'Колбаска',
+                        name: 'Молочная продукция',
                         img: 'src/assets/m8.png',
-                        category: 'colbasa',
-                        link: '#'
+                        category: 'milks',
+                        link: '/products/milks'
                     }
 
                 ],
                 sections:[
                     {
-                        category: 'vege',
+                        category: 'veges',
                         color: '#D5DFDE'
                     },
                     {
-                        category: 'chick',
+                        category: 'fishs',
                         color: '#4D3422'
                     },
                     {
-                        category: 'beef',
+                        category: 'meats',
                         color: '#919C6E'
                     },
                     {
-                        category: 'sausage',
+                        category: 'salads',
                         color: '#FAF6EB'
                     },
                     {
-                        category: 'jam',
+                        category: 'jams',
                         color: '#DF8061'
                     },
                     {
-                        category: 'berry',
+                        category: 'breads',
                         color: '#AC6A54'
                     },
                     {
-                        category: 'fish',
+                        category: 'sausages',
                         color: '#AB895C'
                     },
                     {
-                        category: 'colbasa',
+                        category: 'milks',
                         color: '#FFFFFF'
                     }
                 ],
                 productText: 'плоды и растения',
-                productLink: '#',
+                productLink: '',
             }
         },
         beforeRouteLeave(to, from, next){
@@ -159,7 +159,7 @@
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
-                    }, 350);
+                    }, 550);
                 } else if (this.flow == 'back'){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
@@ -309,6 +309,7 @@
         top: 50%;
         left: 48%;
         transform: translateY(-50%) translateX(-50%);
+        cursor: move;
         .item{
             text-align: center;
             display: block;

@@ -145,7 +145,8 @@
                             zIndex: 2
                         },
                         {
-                            duration: 350,
+                            duration: 550,
+                            // easing: 'easeOutElastic'
                             // complete: () => {
                             //     done();
                             // }
@@ -157,7 +158,7 @@
                 }
                 setTimeout(() => {
                     done();
-                }, 350)
+                }, 550)
                 // Velocity(el, {opacity: 0}, {delay: 1000, duration: 110, complete: done})
             }
         },
@@ -235,7 +236,7 @@
     }
     .float{
         position: absolute;
-        z-index: 0;
+        z-index: 1;
         width: 130px;
     }
 

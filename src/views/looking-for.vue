@@ -14,8 +14,6 @@
 
 <script>
     import floats from '../components/float.vue';
-
-
     export default {
         props:['flow', 'links'],
         data(){
