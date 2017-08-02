@@ -208,7 +208,7 @@
                 ],
                 shops:[
                     {
-                        icon: '/src/assets/marker.png',
+                        icon: './src/assets/marker.png',
                         pos: { lat: 56.01576316631433, lng: 92.82501220266113 },
                         distance: '250 км от города',
                         street: 'Красноярск ул.мужества дом 16',
@@ -220,7 +220,7 @@
                         phones: ['8–923–234–23–23', '8–902–234–21–12']
                     },
                     {
-                        icon: '/src/assets/marker.png',
+                        icon: './src/assets/marker.png',
                         pos: { lat: 56.00803820423192, lng: 92.84406661550292 },
                         distance: '250 км  от города',
                         street: 'Красноярск ул.мужества дом 16',
@@ -232,7 +232,7 @@
                         phones: ['8–923–234–23–23', '8–902–234–21–12']
                     },
                     {
-                        icon: '/src/assets/marker.png',
+                        icon: './src/assets/marker.png',
                         pos: { lat: 56.00194351063795, lng: 92.81883239309082 },
                         distance: '250 км от города',
                         street: 'Красноярск ул.мужества дом 16',
