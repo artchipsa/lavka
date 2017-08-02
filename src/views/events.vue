@@ -31,12 +31,12 @@
                     {
                         name: 'фестиваль «зеленый»',
                         link: '/events/zeleniy',
-                        img: 'url(/src/assets/e1.jpg)'
+                        img: 'url(../assets/e1.jpg)'
                     },
                     {
                         name: 'Другой фестиваль «зеленый»',
                         link: '/events/zeleniy',
-                        img: 'url(/src/assets/e1.jpg)'
+                        img: 'url(../assets/e1.jpg)'
                     }
                 ],
                 _this: '',

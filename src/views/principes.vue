@@ -12,37 +12,37 @@
                     h1 покупателю  #[br] важно #[br] знать!
             .count 01
             .owl-carousel.black-carousel
-                .item(style="background-image: url(/src/assets/p1.jpg)")
+                .item(style="background-image: url(../assets/p1.jpg)")
                     .container
                         .center-text-block
                             h2 Мы работаем #[br] #[span только персонально] #[br] с конкретными #[br] людьми
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block
                             h2 поставщик продуктов короткого хранения#[br]не может находиться#[br]дальше #[span 1000 км] #[br]от магазина
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block
                             h2 «частная лавочка» всегда предпочтет крупным комбинатам и предприятиям #[span частных и семейных поставщиков]
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block
                             h2 мы боремся за доступность цен, но главное – #[span качество, вкус и натуральность продуктов]
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block
                             h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block
                             h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов 
                     .overlay
-                .item(style="background-image: url(/src/assets/p2.jpg)")
+                .item(style="background-image: url(../assets/p2.jpg)")
                     .container
                         .center-text-block.big
                             .row
