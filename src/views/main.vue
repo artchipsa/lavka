@@ -117,22 +117,44 @@
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68}, {duration: 350})                       
+                }                
             },
             enter(el, done){
                 Velocity(document.querySelector('.logo'), {top: '50%', translateY: '-50%', translateX: '-50%'}, {duration: 350})
-                Velocity(document.querySelector('.logo svg'), {width: 304, height: 128}, {duration: 350})
+                if ($(window).width() > 500){
+                    Velocity(document.querySelector('.logo svg'), {width: 304, height: 128}, {duration: 350})
+                } else {
+                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68, opacity: 1}, {duration: 350})
+                    Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 350})
+                }
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
-                 Velocity(document.querySelector('.logo-text'), {opacity: 0}, {display: 'none'},{duration: 350, complete: () => {done();} })
+                Velocity(document.querySelector('.logo-text'), {opacity: 0}, {display: 'none'},{duration: 350})
+                setTimeout(() => {
+                    done();
+                }, 600)
             },
             leave(el, done){
                 clearInterval(this.interval);
-                document.querySelector('body').style.backgroundColor = '#D5DFDE';
+                document.querySelector('body').style.backgroundColor = '#FAF6EB';
                 let elems = document.querySelectorAll('.float');
-                Velocity(document.querySelector('.logo'), {top: 28, translateY: '0%', translateX: '-50%'}, {duration: 350})
-                Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 350})
+                if ($(window).width() > 500){
+                    Velocity(document.querySelector('.logo'), {top: 28, translateY: '0%', translateX: '-50%'}, {duration: 350})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 350})
+                } else {
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {duration: 350})
+                }                
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 1}, {display: 'block'},{duration: 350})
-                var left = 200;
+                var left;
+                if ($(window).width() < 1367 && $(window).width() > 1024){
+                        left = 135;                        
+                    } else if($(window).width() < 1025) { 
+                        left = 82;                                                    
+                    } else {
+                        left = 200;
+                    }
                 var sum_duration = 0;
                 for (let i = 0; i < elems.length; i++) {
                     var width = elems[i].offsetWidth;
@@ -154,7 +176,14 @@
                     )
                     sum_duration += 150;
                     // console.log(sum_duration);
-                    left = left + width + 200;
+
+                    if ($(window).width() < 1367 && $(window).width() > 1024){
+                        left = left + width + 135;                        
+                    } else if($(window).width() < 1025) { 
+                        left = left + width + 82;                                                    
+                    } else {
+                        left = left + width + 200;
+                    }
                 }
                 setTimeout(() => {
                     done();
@@ -165,8 +194,11 @@
         mounted(){
             this.eventShow();
             this.setPosProducts();
-            this.floatProducts();
-            this.interval = setInterval(this.floatProducts, 2500);
+            if ($(window).width() > 600){
+                this.floatProducts();
+                this.interval = setInterval(this.floatProducts, 2500);
+            }
+
         }
     }
 </script>
@@ -175,11 +207,6 @@
     //vars
     @import 'src/assets/styles/settings.scss';
 
-    .container{
-        width: 90%;
-        height: 100%;
-        position: relative;
-    }
      .center-plate{
         position: absolute;
         top: 55%;
@@ -240,6 +267,32 @@
         width: 130px;
     }
 
+    @media (max-width: 1367px){
+        .float{
+            width: 100px;
+        }
+    }
+
+    @import 'src/assets/styles/responsive.scss';    
+
+    @media (max-width: 469px){
+        .float{
+            display: none;
+        }
+        .logo{
+            display: block;
+        }
+        .logo svg{
+            width: 120px;
+            height: 60px;
+        }
+    }
+    @media (max-width: 469px){
+        .left-info-block{
+            bottom: 4%;
+            top: auto;
+        }
+    }
 </style>
 
 

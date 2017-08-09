@@ -2,10 +2,10 @@
      transition(v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" v-on:before-leave="beforeLeave" mode="out-in" v-bind:css="false" appear)
         .view(:style="{backgroundColor: color}")
             .inner-right-sidebar
-                router-link(to="").close
+                router-link(to="/products").close
                     .icon
                         include ../assets/close.svg
-            .container
+            .container(v-if="prod_data && Object.keys(prod_data).length")
                 iscroll-view.scroll-view(ref="Scrollbar" :options="{mouseWheel: true, scrollbars: true, probeType: 3}")
                     .products-grid
                         router-link.item(v-for="item in prod_data.items" :to="item.link" :key="item.id")
@@ -27,34 +27,54 @@
                 prod_data: {}
             }
         },
+        props:['from'],
         methods:{
-            beforeEnter(el){
+           beforeEnter(el){
+                document.querySelector('body').style.backgroundColor = '#D5DFDE';
+                Velocity(el, {translateY: '200%'}, {duration: 10})
+                Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                Velocity($(el).find('.inner-right-sidebar'), {translateY: '-150%'}, {opacity: 0}, {duration: 10});
+                setTimeout(() => {
+                    Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
+                    Velocity($(el).find('.products-grid .item'),{opacity: 0}, {duration: 10});
+                }, 250)
             },
             beforeLeave(el){
+                
             },
             enter(el, done){
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
-                done();
+                setTimeout(() => {
+                    Velocity(el, {translateY: '0%'}, {duration: 450})
+                    Velocity($(el).find('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 600});
+                    Velocity($(el).find('.inner-right-sidebar'), {translateY: '0%'}, {duration: 350, delay: 600});
+                    Velocity($(el).find('.products-grid .item'), "transition.slideUpIn", {stagger: 150, delay: 800});
+                    done();
+                }, 800);
             },
             leave(el, done){
-                done();
+                Velocity(el, {translateY: '200%'}, {duration: 450, delay: 700, complete: done})
+                Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 350})
+                Velocity($(el).find('.inner-right-sidebar'), {translateY: '-150%'}, {duration: 350, delay: 150});
+                Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170});
             },
         },
         created(){
-        },
-        mounted(){
             const path = this.$route.path;
             const data_src = 'src/data' + path + '/data.json';
             
             axios.get(data_src).
                 then(response => {
                     this.prod_data = response.data;
+                    const iscroll = this.$refs.Scrollbar;            
+                    iscroll.refresh();
                 }).catch(error => {
                     console.log(error);
                 });
-
+        },
+        mounted(){
             const iscroll = this.$refs.Scrollbar;            
             iscroll.refresh();
         }
@@ -102,6 +122,35 @@
                 color: $gray;
             }
         }
+    }
+
+    @media (max-width: 1025px) {
+        .products-grid .item {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 769px){
+        .products-grid{
+            padding-top: 30px;
+        }
+    }
+
+
+    @import 'src/assets/styles/responsive.scss';    
+
+    @media (max-width: 469px){
+
+        .products-grid .item{
+            width: 100%;
+        }
+
+        .left-info-block{
+            bottom: auto;
+            top: 12%;
+            width: 90%;
+        }
+        
     }
 
 </style>

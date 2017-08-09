@@ -381,7 +381,7 @@
         position: absolute;
         top: 0px;
         right: 10%;
-        z-index: 1;
+        z-index: 3;
         height: 100%;
         width: 590px;
         background-color: $black;
@@ -467,5 +467,58 @@
             }
         }
     }
+
+    @media (max-width: 1367px){
+        .map_info{
+            padding: 40px;
+        }
+        .map_info .close{
+            right: 0px;
+            top: 75px;
+        }
+        .map_info .distance{
+            font-size: 14px;
+        }
+        .map_info .street{
+            font-size: 38px;
+        }
+        .map_info .text{
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 469px){
+
+        .count{
+            font-size: 9.5vw;
+        }
+
+        .map_info{
+            right: 0%;
+            width: 100%;
+            padding: 3%;
+            padding-top: 60px;
+        }
+        .map_info .close{
+            top: 96px;
+            right: -25px;
+        }
+        .map_info .street{
+            font-size: 28px;
+        }
+        .map_info .owner img{
+            margin-right: 20px;
+        }
+        .map_info .owner-info .owner-name{
+            font-size: 24px;
+        }
+        .map_info .text{
+            font-size: 14px;
+        }
+
+    }
+
+    @import 'src/assets/styles/responsive.scss';    
+
 
 </style>

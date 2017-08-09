@@ -1,8 +1,13 @@
+// dependencies
 import Vue from 'vue';
 import App from './components/app.vue';
 import VueRouter from 'vue-router';
 import IScrollView from 'vue-iscroll-view';
 import IScroll from 'iscroll/build/iscroll-probe.js';
+import SocialSharing from 'vue-social-sharing';
+import vSelect from 'vue-select';
+
+// views
 import main from './views/main.vue';
 import products from './views/products.vue';
 import owners from './views/owners.vue';
@@ -12,13 +17,18 @@ import looking from './views/looking-for.vue';
 import events from './views/events.vue';
 import shops from './views/shops.vue';
 import about from './views/about.vue';
-import product_section from './views/product_section.vue'
-import product from './views/product.vue'
+import product_section from './views/product_section.vue';
+import product from './views/product.vue';
+import event from './views/event.vue';
+import fermers from './views/fermers.vue';
+import VueTouch from 'vue-touch';
 
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 Vue.use(IScrollView, IScroll)
-
+Vue.use(SocialSharing)
+Vue.use(VueTouch)
+Vue.component('v-select', vSelect)
 
 const router = new VueRouter({
     routes: [{
@@ -34,12 +44,16 @@ const router = new VueRouter({
             component: product_section
         },
         {
-            path: '/products/:id/:id',
+            path: '/products/:id/:el',
             component: product
         },
         {
             path: '/owners',
             component: owners
+        },
+        {
+            path: '/owners/fermers',
+            component: fermers
         },
         {
             path: '/prices',
@@ -56,6 +70,10 @@ const router = new VueRouter({
         {
             path: '/events',
             component: events
+        },
+        {
+            path: '/events/:el',
+            component: event
         },
         {
             path: '/shops',

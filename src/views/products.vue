@@ -126,15 +126,21 @@
             const fromDepth = from.path
             let current;
             let next_view;
-            for (let i = 0; i < this.links.length; i++){
-                if (toDepth == this.links[i].url){
-                    next_view = i;
+
+            if (toDepth.length > fromDepth.length){
+                this._flow = fromDepth < toDepth ? 'forward' : 'back';
+            } else {
+                for (let i = 0; i < this.links.length; i++){
+                    if (toDepth == this.links[i].url){
+                        next_view = i;
+                    }
+                    if (fromDepth == this.links[i].url){
+                        current = i;
+                    }
                 }
-                if (fromDepth == this.links[i].url){
-                    current = i;
-                }
+                this._flow = current < next_view ? 'forward' : 'back';
             }
-            this._flow = current < next_view ? 'forward' : 'back';
+
             next();
         },
         methods:{
@@ -182,23 +188,34 @@
                 }
             },
             leave(el, done){
-                document.querySelector('body').style.backgroundColor = '#D5DFDE';
+                document.querySelector('body').style.backgroundColor = '#FAF6EB';
+                console.log(this._flow);
                 if (this._flow == 'forward'){
                     Velocity(document.querySelector('.product-carousel'), {translateY: '-300%', translateX: '-50%'}, {duration: 650});
                     Velocity(document.querySelector('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 650, delay: 500});
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 250});
                     setTimeout(()=>{done();}, 1000);
-                } else if (this.flow == 'back'){
-                    done();
+                } else if (this._flow == 'back'){
+                    done();  
                 } else {
-                    done();                    
+                    done();             
                 }
             },
             owlInit(){
                 this.owl = $('.product-carousel').owlCarousel({
-                    items:6,
+                    // items: 6,
                     loop: true,
                     center: true,
+                    responsive:{
+                        0:{
+                            items: 3,
+                            autoWidth:true,
+                        },
+                        600:{
+                            items: 6,
+                            autoWidth:false,
+                        }
+                    },
                     dotsContainer: '.owl-dots'
                 })
             },
@@ -326,6 +343,8 @@
         }
     }
 
+
+
     .owl-dots{
         position: absolute;
         top: 3%;
@@ -391,6 +410,61 @@
                     height: 20px;
                 }
             }
+        }
+    }
+
+    @media (max-width: 1367px){
+
+        .product-carousel .item img{
+            width: 100px;
+        }
+        .product-carousel{
+            width: 106%;
+            left: 47%;
+            top: 47%;          
+        }
+
+    }
+
+    @media (max-width: 1025px){
+
+        .product-carousel{
+            top: 50%;
+            left: 47%;
+        }
+
+    }
+
+    @media (max-width: 769px) {
+
+        .product-carousel {
+            top: 51%;
+            left: 50%;
+        }
+
+    }
+
+    @media (max-width: 469px){
+
+        .bottom-panel{
+            display: none;
+        }
+        .product-carousel{
+            top: 50%;
+            left: 50%;
+        }
+        .product-carousel .item{
+            width: 190px;
+        }
+    }
+
+
+    @import 'src/assets/styles/responsive.scss';    
+
+    @media (max-width: 469px){
+        .left-info-block{
+            bottom: 4%;
+            top: auto;
         }
     }
 

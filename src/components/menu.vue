@@ -7,6 +7,14 @@
                     ul.second-nav
                         li(v-for="nav in link.second_nav")
                             router-link(:to="nav.link") {{ nav.name }}
+        .socials-block
+                ul
+                    li(v-for="social in socials")
+                        a(v-bind:href="social.url")
+                            i.fa(aria-hidden="true" :class="social.icon")
+        .copyright-block
+            .copyright copyright 2017
+            .copyright-link made in #[a(href="http://chipsa.ru", target="_blank") chipsa]
 </template>
 
 <script>
@@ -86,6 +94,28 @@
                         url: '/shops'
                     }
                 ],
+                socials: [
+                    {
+                        icon: 'fa-instagram',
+                        url: 'https://www.instagram.com/lavochka_net/'
+                    },
+                     {
+                        icon: 'fa-twitter',
+                        url: ''
+                    },
+                     {
+                        icon: 'fa-facebook-official',
+                        url: 'https://www.facebook.com/lavochka.net'
+                    },
+                     {
+                        icon: 'fa-vk',
+                        url: 'https://vk.com/lavochka_net'
+                    },
+                     {
+                        icon: 'fa-odnoklassniki',
+                        url: ''
+                    }
+                ]
             }
         },
         methods:{
@@ -101,6 +131,25 @@
 <style lang="scss">
     //vars
     @import 'src/assets/styles/settings.scss';
+
+    .copyright-block{
+        position: absolute;
+        bottom: 4%;
+        right: 3%;
+        font-family: bebas;
+        font-weight: 800;
+        font-size: 20px;
+        .copyright{
+            display: inline-block;
+            margin-right: 60px;
+        }
+        .copyright-link{
+            display: inline-block;
+            a{
+                color: $black;
+            }
+        }
+    }
 
     .modal-view{
         width: 100%;
@@ -194,6 +243,102 @@
             }
         }
     }
+
+    .modal-view .socials-block{
+        display: none;
+    }
+
+    @media (max-width: 1367px){
+
+        .modal-view .main-nav li a{
+            font-size: 4.6vw;
+        }
+        .modal-view .main-nav .second-nav li a{
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 1025px){
+        .modal-view .main-nav li a{
+            font-size: 6.9vw;
+        }
+        .modal-view .main-nav{
+            width: 40%;
+        }
+        .modal-view .content{
+            width: 75%;
+        }
+    }
+
+    @media(max-width: 769px){
+        
+        .modal-view .content{
+            height: 75%;
+        }
+
+        .modal-view .main-nav {
+            width: 45%;
+        }
+
+        .modal-view .socials-block{
+            display: block;
+            position: absolute;
+            right: 3%;
+            top: 3%;
+            ul{
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+                li{
+                    margin-bottom: 20px;
+                    width: 28px;
+                    text-align: center;
+                    a{
+                        color: $side-menu;
+                        .fa{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 469px){
+        .modal-view .content{
+            width: 94%;
+            height: 80%;
+            overflow: scroll;
+        }
+        .modal-view .main-nav{
+            width: 80%;
+        }
+        .modal-view .main-nav li a{
+            font-size: 12vw;
+        }
+        .modal-view .main-nav .second-nav{
+            position: relative;
+            height: 0%;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+            height: 1px;
+            overflow: hidden;
+        }
+        .modal-view .main-nav li:nth-child(3):hover .second-nav{
+            height: 270px;
+        }
+        .second-nav li:first-child{
+            margin-top: 12px;
+        }
+        .modal-view .main-nav .second-nav li a{
+            font-size: 26px;
+        }
+        .modal-view .main-nav{
+            overflow-y: scroll;
+        }
+    }
+
 
 </style>
 

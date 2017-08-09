@@ -42,7 +42,7 @@
                         .center-text-block
                             h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов 
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)")
+                .item.no-mobile(style="background-image: url(public/p2.jpg)" v-if="mobile")
                     .container
                         .center-text-block.big
                             .row
@@ -72,7 +72,8 @@
         data(){
             return{
                 owl: '',
-                _this: ''
+                _this: '',
+                mobile: false
             }
         },
         beforeRouteLeave(to, from, next){
@@ -108,12 +109,12 @@
             },
             beforeEnter(el){
                 if (this.flow == ''){
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                     Velocity(el, {translateY: '0%'}, {duration: 10})                    
                 } else {
                     Velocity(el, {translateY: '200%'}, {duration: 10})
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
             },
@@ -126,7 +127,7 @@
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
                     Velocity(document.querySelector('.logo-text'), {color: '#ffffff'}, {display: 'block'},{duration: 350})
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 450});
-                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '0%', translateX: '-50%'}, {duration: 350, delay: 600}); 
+                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '0%', translateX: '-50%'}, {duration: 450, delay: 600}); 
                     setTimeout(() => {
                         done();
                     }, 600);
@@ -137,7 +138,7 @@
                     setTimeout(() => {
                         Velocity(el, {translateY: '0%'}, {duration: 450})
                         Velocity($(el).find('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 600});
-                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '0%', translateX: '-50%'}, {duration: 350, delay: 800}); 
+                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '0%', translateX: '-50%'}, {duration: 450, delay: 800}); 
                         done();
                     }, 800);
                 }
@@ -157,8 +158,11 @@
                 }
             }
         },
+        created(){
+        },
         mounted(){
             this.owlInit();
+
             this.owl.on('translate.owl.carousel', (event) => {
                 let index = event.page.index + 1;
                 if (index < 10){
@@ -166,7 +170,13 @@
                 } else {
                     document.querySelector('.count').innerText = index;
                 }
-            })
+            });
+
+            if ($(window).width() < 500){
+                this.mobile = true;
+            } else {
+                this.mobile = false;
+            }
         }
     }
 </script>
@@ -264,6 +274,43 @@
     @media (max-width: 1367px){
         .black-carousel .item .container .row{
             margin-bottom: 28px;
+        }
+    }
+
+    @media (max-width: 1025px){
+        .black-carousel .item .container .center-text-block.big{
+            top: 25%;
+            width: 70%;
+            left: 57%;
+        }
+        .black-carousel .item .container .row .row-item h2 {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 469px){
+        .left-info-block{
+            bottom: auto;
+            top: 12%;
+        }
+        .black-carousel .item .container .center-text-block{
+            width: 80%;
+            left: 43%;
+            top: 50%;
+            min-height: 1px;
+            height: auto;
+        }
+        .count{
+            top: 36%;
+            font-size: 9.5vw;
+        }
+        .black-carousel .item .container .center-text-block h2{
+            font-size: 10.5vw;
+        }
+        .black-carousel .item.no-mobile{
+            display: none;
+        }
+        .owl-dots {
+            right: 3%;
         }
     }
 

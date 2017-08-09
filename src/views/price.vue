@@ -95,12 +95,12 @@
         methods:{
             beforeEnter(el){
                 if (this.flow == ''){
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                     Velocity(el, {translateY: '0%'}, {duration: 10})                    
                 } else {
                     Velocity(el, {translateY: '200%'}, {duration: 10})
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
             },
@@ -113,7 +113,7 @@
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                     Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 450});
-                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 600}); 
+                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 450, delay: 600}); 
                     setTimeout(() => {
                         done();
                     }, 600);
@@ -124,7 +124,7 @@
                     setTimeout(() => {
                         Velocity(el, {translateY: '0%'}, {duration: 450})
                         Velocity($(el).find('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 600});
-                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 800}); 
+                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 450, delay: 800}); 
                         done();
                     }, 600);
                 }
@@ -248,6 +248,38 @@
             padding-top: 10px;
         }
     }
+    
+    @import 'src/assets/styles/responsive.scss';    
+
+    @media (max-width: 469px){
+
+        .left-info-block{
+            bottom: auto;
+            top: 12%;
+        }
+        .center-text-block{
+            height: 80%;
+        }
+
+        .center-text-block.hover-overflow{
+            &:hover{
+                h2{
+                    transform: translateY(-400%);                    
+                }
+                table{
+                    transform: translateY(-80%);                    
+                }
+            }
+        }
+        .center-text-block.hover-overflow table td .name, .center-text-block.hover-overflow table td .price, .center-text-block.hover-overflow table td span{
+            font-size: 18px;
+        }
+        .center-text-block.hover-overflow table td .name[data-v-637b5f72]{
+            width: 45px;
+        }
+
+    }
+
 
 
 </style>

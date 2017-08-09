@@ -1,0 +1,56 @@
+{
+    "description": {
+        "name": "плоды и расстения",
+        "small_message": "40 поставщиков 234 видов продукции"
+    },
+    "fermers": [{
+            "img": "public/ow1.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "veges",
+            "distance": "1000"
+        },
+        {
+            "img": "public/ow2.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "veges",
+            "distance": "1000"
+        },
+        {
+            "img": "public/ow3.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "meats",
+            "distance": "1000"
+        },
+        {
+            "img": "public/ow1.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "salads",
+            "distance": "1000"
+        },
+        {
+            "img": "public/ow2.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "breads",
+            "distance": "1500"
+        },
+        {
+            "img": "public/ow3.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "sausages",
+            "distance": "2000"
+        },
+        {
+            "img": "public/ow2.jpg",
+            "name": "Иванов Константин Борисович",
+            "ferma": "ООО «Птицефабрика»",
+            "category": "milks",
+            "distance": "1500"
+        }
+    ]
+}

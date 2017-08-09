@@ -3,58 +3,58 @@
         .view(:style="{backgroundColor: color}")
             .background-collage
                 .row
-                    .item
-                        img(src="../assets/f1.jpg", alt="")
+                    .item(style="background-image: url(public/f1.jpg)")
+                        //- img(src="../assets/f1.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f2.jpg", alt="")
+                    .item(style="background-image: url(public/f2.jpg)")
+                        //- img(src="../assets/f2.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f3.jpg", alt="")
+                    .item(style="background-image: url(public/f3.jpg)")
+                        //- img(src="../assets/f3.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f4.jpg", alt="")
+                    .item(style="background-image: url(public/f4.jpg)")
+                        //- img(src="../assets/f4.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f5.jpg", alt="")
-                        .overlay
-                .row
-                    .item
-                        img(src="../assets/f6.jpg", alt="")
-                        .overlay
-                    .item
-                        img(src="../assets/f7.jpg", alt="")
-                        .overlay
-                    .item
-                        img(src="../assets/f8.jpg", alt="")
-                        .overlay
-                    .item
-                        img(src="../assets/f9.jpg", alt="")
-                        .overlay
-                    .item
-                        img(src="../assets/f10.jpg", alt="")
+                    .item(style="background-image: url(public/f5.jpg)")
+                        //- img(src="../assets/f5.jpg", alt="")
                         .overlay
                 .row
-                    .item
-                        img(src="../assets/f11.jpg", alt="")
+                    .item(style="background-image: url(public/f6.jpg)")
+                        //- img(src="../assets/f6.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f12.jpg", alt="")
+                    .item(style="background-image: url(public/f7.jpg)")
+                        //- img(src="../assets/f7.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f13.jpg", alt="")
+                    .item(style="background-image: url(public/f8.jpg)")
+                        //- img(src="../assets/f8.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f14.jpg", alt="")
+                    .item(style="background-image: url(public/f9.jpg)")
+                        //- img(src="../assets/f9.jpg", alt="")
                         .overlay
-                    .item
-                        img(src="../assets/f15.jpg", alt="")
+                    .item(style="background-image: url(public/f10.jpg)")
+                        //- img(src="../assets/f10.jpg", alt="")
+                        .overlay
+                .row
+                    .item(style="background-image: url(public/f11.jpg)")
+                        //- img(src="../assets/f11.jpg", alt="")
+                        .overlay
+                    .item(style="background-image: url(public/f12.jpg)")
+                        //- img(src="../assets/f12.jpg", alt="")
+                        .overlay
+                    .item(style="background-image: url(public/f13.jpg)")
+                        //- img(src="../assets/f13.jpg", alt="")
+                        .overlay
+                    .item(style="background-image: url(public/f14.jpg)")
+                        //- img(src="../assets/f14.jpg", alt="")
+                        .overlay
+                    .item(style="background-image: url(public/f15.jpg)")
+                        //- img(src="../assets/f15.jpg", alt="")
                         .overlay
             .container
                 .left-info-block
                     .tag частники
                     h1 каталог лучших частников
-                    router-link(to="/about") список частников
+                    router-link(to="/owners/fermers") список частников
                 .center-text-block
                     h2 Мы работаем #[br] с #[span 40 частниками] #[br]в нескольких #[br]регионах
 
@@ -93,18 +93,18 @@
         },
         methods:{
             switchPhotos(){
-                let photos = document.querySelectorAll('.item img');
+                let photos = document.querySelectorAll('.item');
                 let first = parseInt(Math.random() * (14 - 1) + 1);
                 let second = parseInt(Math.random() * (14 - 1) + 1);
-                let first_img = photos[first].getAttribute('src');
-                let second_img = photos[second].getAttribute('src');
+                let first_img = photos[first].getAttribute('style');
+                let second_img = photos[second].getAttribute('style');
                 Velocity(photos[first], {opacity: 0}, {duration: 850})
                 Velocity(photos[second], {opacity: 0}, {duration: 850, delay: 350})
                 setTimeout(() => {
-                    photos[first].setAttribute('src', second_img);
+                    photos[first].setAttribute('style', second_img);
                 }, 650)
                 setTimeout(() => {
-                    photos[second].setAttribute('src', first_img);
+                    photos[second].setAttribute('style', first_img);
                 }, 1000)
                 Velocity(photos[first], {opacity: 1}, {duration: 450})
                 Velocity(photos[second], {opacity: 1}, {duration: 450})
@@ -112,12 +112,12 @@
             beforeEnter(el){
                 clearInterval(this.interval)
                 if (this.flow == ''){
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                     Velocity(el, {translateY: '0%'}, {duration: 10})                    
                 } else {
                     Velocity(el, {translateY: '200%'}, {duration: 10})
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
             },
@@ -130,7 +130,7 @@
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
                     Velocity(document.querySelector('.logo-text'), {color: '#ffffff'}, {display: 'block'},{duration: 350})
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 450});
-                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 600}); 
+                    Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 450, delay: 600}); 
                     setTimeout(() => {
                         done();
                     }, 600);
@@ -141,7 +141,7 @@
                     setTimeout(() => {
                         Velocity(el, {translateY: '0%'}, {duration: 450})
                         Velocity($(el).find('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 600});
-                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 800}); 
+                        Velocity(document.querySelectorAll('.center-text-block'), {translateY: '-50%', translateX: '-50%'}, {duration: 450, delay: 800}); 
                         done();
                     }, 800);
                 }
@@ -190,7 +190,9 @@
             height: 33.33%;
             .item{
                 width: 20%;
+                height: 100%;
                 position: relative;
+                background-size: cover;
                 img{
                     width: 100%;
                     height: 100%;
@@ -212,6 +214,23 @@
             color: $white;
         }
     }
+    
+    @media (max-width: 1025px){
+
+        .background-collage .row .item{
+            background-position: 50% 0%;
+        }
+
+    }
+
+    @media (max-width: 469px){
+        .left-info-block{
+            bottom: auto;
+            top: 12%;
+        }
+    }
+
+    @import 'src/assets/styles/responsive.scss';    
 
 
 </style>

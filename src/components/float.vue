@@ -77,6 +77,22 @@
             width: 130px;
         }
     }
+
+    @media (max-width: 1367px){
+        .floats-block{
+            .float{
+                width: 100px;
+            }
+        }
+    }
+
+    @media (max-width: 1025px){
+        .floats-block{
+            .float{
+                width: 100px;
+            }
+        }
+    }
 </style>
 
 
