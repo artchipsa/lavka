@@ -3,7 +3,7 @@
         .view(:style="{backgroundColor: color}")
             floats
             .container
-                .left-info-block.mobile-top
+                .left-info-block.mobile-top.big
                     .tag цены
                     h1 вы можете ознакомиться #[br] с ценами  на товары
                     router-link(to="/about") список цен
@@ -279,6 +279,13 @@
 
     }
 
+    @media (max-width: 321px){
+
+        .center-text-block.hover-overflow table td .name{
+            margin-right: 40px;
+        }
+
+    }
 
 
 </style>

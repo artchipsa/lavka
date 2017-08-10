@@ -309,6 +309,14 @@
         }
     }
 
+    @media (max-width: 321px){
+
+        .black-carousel .item .container .center-text-block h2{
+            font-size: 9.2vw;
+        }
+
+    }
+
     @import 'src/assets/styles/responsive.scss';    
 
 </style>
