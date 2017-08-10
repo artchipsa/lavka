@@ -1,6 +1,6 @@
 <template lang="pug">
     .main
-        .mobile-logo
+        router-link(to="/").mobile-logo
             include ../assets/logo.svg            
         a(href="#" @click.prevent="showMenu")#menu
             span
@@ -14,7 +14,7 @@
             .socials-block
                 ul
                     li(v-for="social in socials")
-                        a(v-bind:href="social.url")
+                        a(v-bind:href="social.url", target="_blank")
                             i.fa(aria-hidden="true" :class="social.icon")
             .links-block
                 ul
@@ -478,10 +478,10 @@
         z-index: 1;
         &.white{
             a{
-                color: #fff;
+                color: #fff!important;
             }
             h1{
-                color: #fff;
+                color: #fff!important;
             }
         }
         &.top{
@@ -550,6 +550,11 @@
         position: absolute;
         top: 3%;
         right: 3%;
+        &.white{
+            .owl-dot{
+                background-color: $white;
+            }
+        }
         .owl-dot{
             width: 10px;
             height: 10px;
@@ -573,6 +578,11 @@
         position: absolute;
         bottom: 8%;
         right: 3%;
+        &.white{
+            a{
+                color: $white;
+            }
+        }
         a{
             color: $black-brown;
             margin-right: 30px;

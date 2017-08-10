@@ -93,7 +93,7 @@
                                                 li 
                                                     a(href="")
                                                         i.fa.fa-instagram(aria-hidden="true")
-                .left-info-block
+                .left-info-block.mobile-top.big
                     .tag Кто мы
                     h1 супермакет натуральных продуктов
 </template>
@@ -120,6 +120,9 @@
             beforeLeave(el){
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
@@ -390,14 +393,6 @@
             width: 100%;
         }
 
-    }
-
-    @media (max-width: 469px){
-        .left-info-block{
-            bottom: auto;
-            top: 12%;
-            width: 90%;
-        }
     }
 
 </style>

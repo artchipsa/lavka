@@ -6,12 +6,12 @@
                     .icon
                         include ../assets/close.svg
             .container(v-if="prod_data && Object.keys(prod_data).length")
-                iscroll-view.scroll-view(ref="Scrollbar" :options="{mouseWheel: true, scrollbars: true, probeType: 3}")
+                iscroll-view.scroll-view(ref="Scrollbar" :options="{mouseWheel: true, click: true, tap:true, scrollbars: true, probeType: 3, preventDefault: false}")
                     .products-grid
                         router-link.item(v-for="item in prod_data.items" :to="item.link" :key="item.id")
                             img(:src="item.img", :alt="item.name")
                             span {{item.name}}
-                .left-info-block
+                .left-info-block.mobile-top.big
                     .tag продукция
                     h1 {{ prod_data.description.name }}
                     span {{ prod_data.description.small_message }}
@@ -43,6 +43,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
@@ -143,12 +146,6 @@
 
         .products-grid .item{
             width: 100%;
-        }
-
-        .left-info-block{
-            bottom: auto;
-            top: 12%;
-            width: 90%;
         }
         
     }

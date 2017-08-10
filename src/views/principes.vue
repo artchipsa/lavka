@@ -7,7 +7,7 @@
                     i.fa.fa-chevron-left(aria-hidden="true")
                 a(href="#" @click.prevent="nextSlide")
                     i.fa.fa-chevron-right(aria-hidden="true")
-            .left-info-block
+            .left-info-block.mobile-top
                     .tag принципы
                     h1 покупателю  #[br] важно #[br] знать!
             .count 01
@@ -42,7 +42,7 @@
                         .center-text-block
                             h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов 
                     .overlay
-                .item.no-mobile(style="background-image: url(public/p2.jpg)" v-if="mobile")
+                .item(style="background-image: url(public/p2.jpg)" v-if="mobile")
                     .container
                         .center-text-block.big
                             .row
@@ -73,7 +73,7 @@
             return{
                 owl: '',
                 _this: '',
-                mobile: false
+                mobile: true
             }
         },
         beforeRouteLeave(to, from, next){
@@ -96,7 +96,7 @@
             owlInit(){
                 this.owl = $('.black-carousel').owlCarousel({
                     items:1,
-                    loop: true,
+                    // loop: true,
                     center: true,
                     dotsContainer: '.owl-dots'
                 })
@@ -122,6 +122,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
@@ -147,22 +150,28 @@
             leave(el, done){
                 clearInterval(this.interval)
                 if (this._flow == 'forward'){
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 350})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 350})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170, complete: done});
                     document.querySelector('body').style.backgroundColor = '#FAF6EB';      
                 } else if (this._flow == 'back'){
                     Velocity(el, {translateY: '200%'}, {duration: 450, delay: 600, complete: done})
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 350})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 350})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170});
                     document.querySelector('body').style.backgroundColor = '#D5DFDE';
                 }
             }
         },
         created(){
+            if ($(window).width() < 500){
+                this.mobile = false;
+            } else {
+                this.mobile = true;
+            }
         },
         mounted(){
-            this.owlInit();
+            console.log(this.mobile)
 
+            this.owlInit();            
             this.owl.on('translate.owl.carousel', (event) => {
                 let index = event.page.index + 1;
                 if (index < 10){
@@ -171,12 +180,6 @@
                     document.querySelector('.count').innerText = index;
                 }
             });
-
-            if ($(window).width() < 500){
-                this.mobile = true;
-            } else {
-                this.mobile = false;
-            }
         }
     }
 </script>
@@ -192,16 +195,10 @@
     .owl-dots{
         right: 13%;
         z-index: 1;
-        .owl-dot{
-            background-color: $white;
-        }
     }
     .owl-arrows{
         right: 13%;
         z-index: 1;
-        a{
-            color: $white;
-        }
     }
 
     .count{
@@ -287,11 +284,9 @@
             font-size: 24px;
         }
     }
+
+
     @media (max-width: 469px){
-        .left-info-block{
-            bottom: auto;
-            top: 12%;
-        }
         .black-carousel .item .container .center-text-block{
             width: 80%;
             left: 43%;
@@ -313,6 +308,8 @@
             right: 3%;
         }
     }
+
+    @import 'src/assets/styles/responsive.scss';    
 
 </style>
 

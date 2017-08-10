@@ -197,6 +197,10 @@
     .small-message {
         top: 12%;
         bottom: auto;
+        padding: 12px 22px;
+    }
+    .small-message .tag {
+        margin-bottom: 20px;
     }
     .scroll-down {
         display: none;
@@ -245,9 +249,9 @@
             fill: #312217;
         }
     }
-    .logo {
-        display: none;
-    }
+    // .logo {
+    //     display: none;
+    // }
     .owl-arrows {
         bottom: 3%;
     }
@@ -263,6 +267,15 @@
     }
     .center-text-block h2 {
         font-size: 12.2vw;
+    }
+    .left-info-block {
+        &.mobile-top {
+            bottom: auto;
+            top: 11%;
+        }
+        &.big {
+            width: 90%;
+        }
     }
     .left-info-block p {
         font-size: 14px;
@@ -308,6 +321,13 @@
     .left-info-block h1 {
         margin-bottom: 10px;
     }
+    .black-carousel .item .container .center-text-block {
+        width: 80%;
+        left: 43%;
+        top: 50%;
+        min-height: 1px;
+        height: auto;
+    }
 }
 
 @media (max-width: 321px) {
@@ -339,5 +359,21 @@
     }
     .people-block .item .content {
         padding: 12px;
+    }
+    .small-message {
+        display: none;
+    }
+    .mobile-logo svg {
+        width: 50px;
+    }
+    #menu {
+        top: 2.2%;
+        left: 73px;
+    }
+    .owl-dots .owl-dot {
+        margin-right: 8px;
+    }
+    .scroll-view {
+        height: 73%;
     }
 }

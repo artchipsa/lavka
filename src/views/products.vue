@@ -150,6 +150,7 @@
                     Velocity($(el).find('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 10});
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
+
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
@@ -158,6 +159,9 @@
                 Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 10});
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == 'forward'){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){

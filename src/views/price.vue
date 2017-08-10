@@ -3,7 +3,7 @@
         .view(:style="{backgroundColor: color}")
             floats
             .container
-                .left-info-block
+                .left-info-block.mobile-top
                     .tag цены
                     h1 вы можете ознакомиться #[br] с ценами  на товары
                     router-link(to="/about") список цен
@@ -108,6 +108,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -253,10 +256,6 @@
 
     @media (max-width: 469px){
 
-        .left-info-block{
-            bottom: auto;
-            top: 12%;
-        }
         .center-text-block{
             height: 80%;
         }

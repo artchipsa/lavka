@@ -212,7 +212,7 @@
                         pos: { lat: 56.01576316631433, lng: 92.82501220266113 },
                         distance: '250 км от города',
                         street: 'Красноярск ул.мужества дом 16',
-                        owner_pic: '../src/assets/owner.png',
+                        owner_pic: 'public/ev_rev1.png',
                         owner_name: 'Крамарновский константин',
                         owner_status: 'управляющий',
                         shop_story: '17 и 18 июня на острове Татышев в восьмой раз пройдёт главный пикник красноярского лета — фестиваль «Зелёный». Традиционно его делает медиагруппа «Прима» и наши друзья. Сотни площадок, на которых можно попробовать лучшую еду для пикника, посетить лекции, поиграть в подвижные игры, сделать лучшие фотографии за год, послушать правильную музыку или просто поваляться с книжкой на траве.',
@@ -224,7 +224,7 @@
                         pos: { lat: 56.00803820423192, lng: 92.84406661550292 },
                         distance: '250 км  от города',
                         street: 'Красноярск ул.мужества дом 16',
-                        owner_pic: '../src/assets/owner.png',
+                        owner_pic: 'public/ev_rev1.png',
                         owner_name: 'Крамарновский константин',
                         owner_status: 'управляющий',
                         shop_story: '17 и 18 июня на острове Татышев в восьмой раз пройдёт главный пикник красноярского лета — фестиваль «Зелёный». Традиционно его делает медиагруппа «Прима» и наши друзья. Сотни площадок, на которых можно попробовать лучшую еду для пикника, посетить лекции, поиграть в подвижные игры, сделать лучшие фотографии за год, послушать правильную музыку или просто поваляться с книжкой на траве.',
@@ -236,7 +236,7 @@
                         pos: { lat: 56.00194351063795, lng: 92.81883239309082 },
                         distance: '250 км от города',
                         street: 'Красноярск ул.мужества дом 16',
-                        owner_pic: '../src/assets/owner.png',
+                        owner_pic: 'public/ev_rev1.png',
                         owner_name: 'Крамарновский константин',
                         owner_status: 'управляющий',
                         shop_story: '17 и 18 июня на острове Татышев в восьмой раз пройдёт главный пикник красноярского лета — фестиваль «Зелёный». Традиционно его делает медиагруппа «Прима» и наши друзья. Сотни площадок, на которых можно попробовать лучшую еду для пикника, посетить лекции, поиграть в подвижные игры, сделать лучшие фотографии за год, послушать правильную музыку или просто поваляться с книжкой на траве.',
@@ -274,6 +274,9 @@
                 clearInterval(this.interval)                
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -298,18 +301,20 @@
                 Velocity($(el).find('.count'), {translateX: '-150%'}, { duration: 350, complete: done});
             },
             showInfo(id){
-                let infos = document.querySelectorAll('.map_info');
-                for (let i = 0; i < infos.length; i++){
-                    if (infos[i].style.translateY = "0%"){
-                        Velocity(infos[i], {translateY: '-200%'}, {duration: 450});
-                    }
-                }
-                Velocity(infos[id], {translateY: '0%'}, {duration: 450});
+                // let infos = document.querySelectorAll('.map_info');
+                // for (let i = 0; i < infos.length; i++){
+                //     if (infos[i].style.translateY = "0%"){
+                //         Velocity(infos[i], {translateY: '-200%'}, {duration: 450});
+                //     }
+                // }
+                // Velocity(infos[id], {translateY: '0%'}, {duration: 450});
+                $('.map_info').removeClass('active');
+                $('.map_info').eq(id).addClass('active');
             },
             closeInfo(event){
-                var el = event.target.parentNode;
-                var parent = this.findParent(el, 'map_info');
-                Velocity(parent, {translateY: '-200%'}, {duration: 450});
+                let el = event.currentTarget;
+                let parent = el.parentNode;
+                $(parent).removeClass('active');
             },
             findParent(el, cls){
                 while ((el = el.parentElement) && !el.classList.contains(cls));
@@ -387,8 +392,11 @@
         background-color: $black;
         padding: 75px;
         color: $white;
-        /* transition: all .45s; */
+        transition: all .45s; 
         transform: translateY(-200%);
+        &.active{
+            transform: translateY(0%);
+        }
         .content{
             height: 100%;
             display: flex;
@@ -518,7 +526,31 @@
 
     }
 
-    @import 'src/assets/styles/responsive.scss';    
+    @media (max-width: 321px){
 
+        .map_info .distance{
+            width: 50%;
+            margin-bottom: 5px;
+        }
+        .map_info .street{
+            font-size: 26px;
+        }
+
+        .map_info .close img{
+            margin-right: 10px;
+        }
+        .map_info .close{
+            top: 87px;
+            right: -22px;
+        }
+        .map_info .owner-info{
+            width: 50%;
+        }
+        .map_info .email{
+            margin-bottom: 18px;
+        }
+    }
+
+    @import 'src/assets/styles/responsive.scss';    
 
 </style>

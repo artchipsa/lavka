@@ -113,12 +113,16 @@
                 }
             },
             beforeEnter(){
-                clearInterval(this.interval);                
+                clearInterval(this.interval);
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 1}, {display: 'block'}, {duration: 10})
+                }                
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
                 if ($(window).width() < 500){
-                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68}, {duration: 350})                       
+                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68}, {duration: 350})
+                    Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10});
                 }                
             },
             enter(el, done){

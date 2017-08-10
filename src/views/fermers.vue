@@ -14,7 +14,7 @@
 							v-select(:searchable="false" :on-change="changeCallback" :value="options[0].label" :options="options" placeholder="Выберете тип")
 						.slider-block
 							span.label удаленность
-							span.value {{ slider.value }} км
+							span.value {{ sliderVal }} 
 							vue-slider(ref="slider" @drag-end="callbackSlider" v-bind="slider" v-model="slider.value")
 					section
 						.people-block
@@ -24,7 +24,7 @@
 								.content
 									.name {{ fermer.name }}
 									.shop {{ fermer.ferma }}
-				.left-info-block
+				.left-info-block.mobile-top.big
 					.tag Частники
 					h1 Каталог частников
 					span 40 поставщиков #[br] 234 видов продукции 
@@ -82,11 +82,12 @@
                     }
                 ],
                 selectVal: '',
+                sliderVal: 'В городе',
                 slider: {
-                    value: 1000,
+                    value: 0,
                     width: 240,
-                    min: 1000,
-                    max: 2000,
+                    min: 0,
+                    max: 1500,
                     interval: 500,
                     tooltip: "hover",
                     height: 4,
@@ -127,6 +128,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
@@ -145,6 +149,22 @@
             },
             callbackSlider(val){
                 this.filter(this.selectVal, this.slider.value);
+                switch (this.slider.value) {
+                    case 0:
+                        this.sliderVal = "В городе"
+                        break;
+                    case 500:
+                        this.sliderVal = "до 500 км"
+                        break;                        
+                    case 1000:
+                        this.sliderVal = "до 1000 км"
+                        break;                        
+                    case 1500:
+                        this.sliderVal = "> 1000 км"
+                        break;                        
+                    default:
+                        break;
+                }
             },
             changeCallback(val){
                 this.selectVal = val.value
@@ -355,6 +375,7 @@
         }
         .vue-slider-wrap{
             width: 250px!important;
+            margin-left: 0px!important;
         }
         .filter-block .label{
             margin-bottom: 10px;
@@ -363,12 +384,5 @@
 
     @import 'src/assets/styles/responsive.scss';    
 
-    @media (max-width: 469px){
-        .left-info-block{
-            bottom: auto;
-            top: 11%;
-            width: 90%;
-        }
-    }
 
 </style>

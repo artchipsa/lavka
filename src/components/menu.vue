@@ -10,7 +10,7 @@
         .socials-block
                 ul
                     li(v-for="social in socials")
-                        a(v-bind:href="social.url")
+                        a(v-bind:href="social.url" target="_blank")
                             i.fa(aria-hidden="true" :class="social.icon")
         .copyright-block
             .copyright copyright 2017

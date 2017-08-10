@@ -90,6 +90,9 @@
                 el.style.zIndex = 1;
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
@@ -148,29 +151,23 @@
     //vars
     @import 'src/assets/styles/settings.scss';
 
-    .left-info-block{
-        z-index: 1;
-        h1{
-            color: $white;
-        }
-        a{
-            color: $white;
-        }
-    }
+    // .left-info-block{
+    //     z-index: 1;
+    //     h1{
+    //         color: $white;
+    //     }
+    //     a{
+    //         color: $white;
+    //     }
+    // }
 
     .owl-dots{
         right: 13%;
         z-index: 1;
-        .owl-dot{
-            background-color: $white;
-        }
     }
     .owl-arrows{
         right: 13%;
         z-index: 1;
-        a{
-            color: $white;
-        }
     }
 
     .count{
@@ -193,39 +190,6 @@
             position: relative;
             height: 100%;
             width: 100%;
-            .container{
-                z-index: 1;
-                .center-text-block{
-                    top: 23%;
-                    left: 55%;
-                    width: 65%;
-                    transform: translateX(-50%);
-                    &.big{
-                        top: 25%;
-                        width: 65%;
-                        left: 55%;
-                    }
-                }
-                .row{
-                    width: 100%;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-between;
-                    margin-bottom: 150px;
-                    &:last-child{
-                        margin-bottom: 0px;
-                    }
-                    .row-item{
-                        width: 33.33%;
-                        h2{
-                            font-size: 26px;
-                            padding-right: 20%;
-                            margin-bottom: 0px;
-                        }
-                    }
-                }
-
-            }
             .overlay{
                 position: absolute;
                 top: 0px;
@@ -238,6 +202,23 @@
         }
     }
     
+    @media (max-width: 769px){
+        .owl-dots{
+            right: 3%;
+            z-index: 1;
+            .owl-dot{
+                background-color: $white;
+            }
+        }
+        .owl-arrows{
+            right: 3%;
+            z-index: 1;
+            a{
+                color: $white;
+            }
+        }
+    }
+
 </style>
 
 

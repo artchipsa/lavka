@@ -87,6 +87,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})

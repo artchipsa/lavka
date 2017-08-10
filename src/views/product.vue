@@ -15,7 +15,7 @@
             .background(style="background-image: url(public/vege_prod_1.jpg)")
                 .overlay(v-if="over_show")
             .container(v-if="prod_data && Object.keys(prod_data).length")
-                iscroll-view.scroll-view(ref="Scrollbar" @scroll="spy" :options="{mouseWheel: true, scrollbars: true, probeType: 3}")
+                iscroll-view.scroll-view(ref="Scrollbar" @scroll="spy" :options="{mouseWheel: true, click: true, tap:true, scrollbars: true, probeType: 3, preventDefault: false}")
                     section#deals
                         .small-title {{ prod_data.deals.tag }}
                         div(v-html="prod_data.deals.title")
@@ -30,7 +30,7 @@
                                     .name {{ owner.name }}
                                     .shop {{ owner.shop }}
 
-                .left-info-block
+                .left-info-block.mobile-top.big
                     .tag {{prod_data.description.tag}}
                     h1 {{ prod_data.description.name }}
 </template>
@@ -64,6 +64,9 @@
                 
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
@@ -156,13 +159,5 @@
     }
 
     @import 'src/assets/styles/responsive.scss';    
-
-    @media (max-width: 469px){
-        .left-info-block{
-            bottom: auto;
-            top: 12%;
-            width: 90%;
-        }
-    }
 
 </style>

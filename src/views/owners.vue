@@ -125,6 +125,9 @@
                 clearInterval(this.interval)                
             },
             enter(el, done){
+                if ($(window).width() < 500){
+                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
@@ -151,11 +154,11 @@
                 document.querySelector('body').style.backgroundColor = '#D5DFDE';
                 clearInterval(this.interval)
                 if (this._flow == 'forward'){
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 350})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 350})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170, complete: done});
                 } else if (this._flow == 'back'){
                     Velocity(el, {translateY: '200%'}, {duration: 450, delay: 600, complete: done})
-                    Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 350})
+                    Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 350})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170});
                 }
             }
