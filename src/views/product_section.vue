@@ -103,9 +103,13 @@
         min-height: 70vh;
         .item{
             width: 33%;
-            height: 250px;
+            margin-bottom: 30px;
+            height: 300px;
             text-align: center;
             position: relative;
+            img{
+                max-height: 250px;
+            }
             &:hover{
                 span{
                     opacity: 1;

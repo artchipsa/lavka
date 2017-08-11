@@ -6,27 +6,22 @@
     "items": {
         "fruits": {
             "name": "фрукты",
-            "img": "src/assets/fruits.png",
+            "img": "public/products/36.png",
             "link": "/products/veges/fruits"
         },
         "vegetables": {
-            "name": "Овощи",
-            "img": "src/assets/fruits.png",
+            "name": "Овощи и зелень",
+            "img": "public/products/37.png",
             "link": "/products/veges/vegetables"
-        },
-        "green": {
-            "name": "Зелень",
-            "img": "src/assets/fruits.png",
-            "link": "/products/veges/greens"
         },
         "nuts": {
             "name": "Орехи, сухофрукты",
-            "img": "src/assets/fruits.png",
+            "img": "public/products/38.png",
             "link": "/products/veges/nuts"
         },
         "frozen": {
             "name": "Замороженная ягода, овощи",
-            "img": "src/assets/fruits.png",
+            "img": "public/products/39.png",
             "link": "/products/veges/frozen"
         }
     }

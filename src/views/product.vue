@@ -12,13 +12,13 @@
                             a(href="#deals") подход
                         li
                             a(href="#owners") частники
-            .background(style="background-image: url(public/vege_prod_1.jpg)")
+            .background(:style="{backgroundImage: prod_data.img }")
                 .overlay(v-if="over_show")
             .container(v-if="prod_data && Object.keys(prod_data).length")
                 iscroll-view.scroll-view(ref="Scrollbar" @scroll="spy" :options="{mouseWheel: true, click: true, tap:true, scrollbars: true, probeType: 3, preventDefault: false}")
                     section#deals
                         .small-title {{ prod_data.deals.tag }}
-                        div(v-html="prod_data.deals.title")
+                        div.smaller(v-html="prod_data.deals.title")
                         p {{ prod_data.deals.description }}
                     section#owners(data-change="true")
                         .small-title {{ prod_data.owners.tag }}

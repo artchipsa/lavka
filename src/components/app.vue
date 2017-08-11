@@ -838,7 +838,9 @@
     .mobile-logo{
         display: none;
     }
-
+    .smaller h2{
+        font-size: 4vw;
+    }
     @media (max-width: 1367px){
 
         .right-menu .socials-block ul li{
