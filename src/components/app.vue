@@ -752,12 +752,20 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
+            min-height: 590px;
             img{
                 width: 100%;
                 display: block;
             }
+            .img{
+                height: 60%;
+                background-size: cover;
+                background-position: 50% 0%;
+            }
             .content{
                 padding: 49px 30px 35px 30px;
+                min-height: 40%;
+                height: 40%;
                 background-color: $light-cyan;
                 .name{
                     font-family: bebas;

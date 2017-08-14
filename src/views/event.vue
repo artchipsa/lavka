@@ -163,10 +163,10 @@
                     this.event_data = response.data;
                     const iscroll = this.$refs.Scrollbar;            
                     iscroll.refresh();
+                    $('.owl-carousel').trigger('destroy.owl.carousel');
                 }).catch(error => {
                     console.log(error);
                 });
-            $('.owl-carousel').trigger('destroy.owl.carousel');
         },
         mounted(){
             this.url = this.$route.path;
@@ -418,6 +418,9 @@
         }
         #reviews .item .reviewer-info{
             margin-bottom: 30px;
+        }
+        .sharing div .text{
+            font-size: 14px;
         }
     }
 

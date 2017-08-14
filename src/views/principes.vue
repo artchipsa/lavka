@@ -15,17 +15,12 @@
                 .item(style="background-image: url(public/p1.jpg)")
                     .container
                         .center-text-block
-                            h2 Мы работаем #[br] #[span только персонально] #[br] с конкретными #[br] людьми
+                            h2 «частная лавочка» всегда предпочтет крупным комбинатам и предприятиям #[br] #[span частных и семейных поставщиков]
                     .overlay
                 .item(style="background-image: url(public/p2.jpg)")
                     .container
                         .center-text-block
-                            h2 поставщик продуктов короткого хранения#[br]не может находиться#[br]дальше #[span 1000 км] #[br]от магазина
-                    .overlay
-                .item(style="background-image: url(public/p2.jpg)")
-                    .container
-                        .center-text-block
-                            h2 «частная лавочка» всегда предпочтет крупным комбинатам и предприятиям #[span частных и семейных поставщиков]
+                            h2 мы сотрудничаем только #[span персонально] #[br] с конкретными людьми. #[br] хозяин отвечает за все
                     .overlay
                 .item(style="background-image: url(public/p2.jpg)")
                     .container
@@ -35,12 +30,17 @@
                 .item(style="background-image: url(public/p2.jpg)")
                     .container
                         .center-text-block
-                            h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов
+                            h2 поставщик продуктов короткого хранения#[br]не может находиться#[br]дальше #[span 1000 км] #[br]от магазина
                     .overlay
                 .item(style="background-image: url(public/p2.jpg)")
                     .container
                         .center-text-block
-                            h2 у нас #[span нет] продуктов, которые изготовлены с использованием химических консервантов 
+                            h2 у нас #[span нет] продуктов, #[br] которые изготовлены с использованием химических консервантов
+                    .overlay
+                .item(style="background-image: url(public/p2.jpg)")
+                    .container
+                        .center-text-block
+                            h2 В супермаркетах «Частная Лавочка» принципиально нет склада. Свежие продукты подвозятся в магазин #[span каждый день ранним утром]   
                     .overlay
                 .item(style="background-image: url(public/p2.jpg)" v-if="mobile")
                     .container
@@ -249,6 +249,7 @@
                         width: 33.33%;
                         h2{
                             font-size: 26px;
+                            line-height: 135%;
                             padding-right: 20%;
                             margin-bottom: 0px;
                         }
@@ -299,7 +300,7 @@
             font-size: 9.5vw;
         }
         .black-carousel .item .container .center-text-block h2{
-            font-size: 10.5vw;
+            font-size: 9.5vw;
         }
         .black-carousel .item.no-mobile{
             display: none;
@@ -312,7 +313,7 @@
     @media (max-width: 321px){
 
         .black-carousel .item .container .center-text-block h2{
-            font-size: 9.2vw;
+            font-size: 8.2vw;
         }
 
     }

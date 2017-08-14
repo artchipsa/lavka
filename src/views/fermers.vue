@@ -20,7 +20,7 @@
 						.people-block
 							.error-message По данному виду не найден ни один частник ;(
 							.item(v-for="fermer in ferm_data.fermers" v-bind:data-category="fermer.category" v-bind:data-distance="fermer.distance")
-								img(:src="fermer.img", alt="")
+								.img(:style="{backgroundImage: fermer.img}")
 								.content
 									.name {{ fermer.name }}
 									.shop {{ fermer.ferma }}
@@ -304,7 +304,9 @@
             display: inline-block;
         }
     }
-
+    .slider-block{
+        display: none;
+    }
     @media (max-width: 1367px){
         .filter-block{
             margin-top: 30px;

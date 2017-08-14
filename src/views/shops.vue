@@ -504,11 +504,12 @@
         .map_info{
             right: 0%;
             width: 100%;
+            z-index: 5;
             padding: 3%;
-            padding-top: 60px;
+            padding-bottom: 60px;
         }
         .map_info .close{
-            top: 96px;
+            top: 48px;
             right: -25px;
         }
         .map_info .street{
@@ -516,6 +517,7 @@
         }
         .map_info .owner img{
             margin-right: 20px;
+            width: 32%;
         }
         .map_info .owner-info .owner-name{
             font-size: 24px;

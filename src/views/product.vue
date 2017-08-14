@@ -20,15 +20,16 @@
                         .small-title {{ prod_data.deals.tag }}
                         div.smaller(v-html="prod_data.deals.title")
                         p {{ prod_data.deals.description }}
-                    section#owners(data-change="true")
+                    section#owners(data-change="true" v-if="prod_data.owners")
                         .small-title {{ prod_data.owners.tag }}
                         div(v-html="prod_data.owners.title")
                         .people-block.invert
                             .item(v-for="owner in prod_data.owners.owners_list")
-                                img(:src="owner.img", alt="")
+                                //- img(:src="owner.img", alt="")
+                                .img(:style="{backgroundImage: owner.img}")
                                 .content
                                     .name {{ owner.name }}
-                                    .shop {{ owner.shop }}
+                                    .shop {{ owner.ferma }}
 
                 .left-info-block.mobile-top.big
                     .tag {{prod_data.description.tag}}

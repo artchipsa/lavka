@@ -17,7 +17,7 @@
             .container
                 a(href="#").small-message
                     .tag Ближайшее событие
-                    span Фестиваль «зеленый»
+                    span Открытие магазина в сентябре
                 .left-info-block
                     .tag Кто мы
                     h1 супермакет натуральных продуктов
@@ -261,7 +261,7 @@
             font-family: bebas;
             font-weight: 800;
             font-size: 36px;
-            width: 50%;
+            width: 65%;
             color: $black;
         }
     }

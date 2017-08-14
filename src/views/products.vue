@@ -86,7 +86,7 @@
                 sections:[
                     {
                         category: 'veges',
-                        color: '#D5DFDE'
+                        color: '#FAF6EB'
                     },
                     {
                         category: 'fishs',
@@ -98,7 +98,7 @@
                     },
                     {
                         category: 'salads',
-                        color: '#FAF6EB'
+                        color: '#D5DFDE'
                     },
                     {
                         category: 'jams',
@@ -150,7 +150,9 @@
                     Velocity($(el).find('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 10});
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
-
+                if ($(window).width() < 500){
+                    Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 10});
+                }
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
@@ -169,6 +171,9 @@
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
+                        if ($(window).width() < 500){
+                            Velocity($('.product-carousel'),{opacity: 1, translateX: '-50%', translateY:'-50%'},{duration: 350});
+                        }
                     }, 550);
                 } else if (this.flow == 'back'){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
@@ -200,7 +205,12 @@
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 250});
                     setTimeout(()=>{done();}, 1000);
                 } else if (this._flow == 'back'){
-                    done();  
+                    if ($(window).width() < 500){
+                        Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 350});
+                        setTimeout(() => {
+                            done();
+                        }, 450)
+                    }
                 } else {
                     done();             
                 }

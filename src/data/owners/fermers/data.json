@@ -4,53 +4,53 @@
         "small_message": "40 поставщиков 234 видов продукции"
     },
     "fermers": [{
-            "img": "public/ow1.jpg",
+            "img": "url(public/fermers/01.jpg)",
             "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
-            "category": "veges",
-            "distance": "1000"
-        },
-        {
-            "img": "public/ow2.jpg",
-            "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
-            "category": "veges",
-            "distance": "1000"
-        },
-        {
-            "img": "public/ow3.jpg",
-            "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
+            "ferma": "Вербицкие",
             "category": "meats",
-            "distance": "1000"
+            "distance": "0"
         },
         {
-            "img": "public/ow1.jpg",
+            "img": "url(public/fermers/02.jpg)",
             "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
-            "category": "salads",
-            "distance": "1000"
-        },
-        {
-            "img": "public/ow2.jpg",
-            "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
+            "ferma": "Пекарня Vivo and Jolly",
             "category": "breads",
-            "distance": "1500"
+            "distance": "0"
         },
         {
-            "img": "public/ow3.jpg",
+            "img": "url(public/fermers/03.jpg)",
             "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
-            "category": "sausages",
-            "distance": "2000"
+            "ferma": "Пекарня №1",
+            "category": "breads",
+            "distance": "0"
         },
         {
-            "img": "public/ow2.jpg",
+            "img": "url(public/fermers/04.jpg)",
+            "name": "Воднев Кирилл Борисович",
+            "ferma": "Воднев хлеб",
+            "category": "breads",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/05.jpg)",
+            "name": "Вальтер Игорь Борисович",
+            "ferma": "Вальтер Игорь",
+            "category": "veges",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/06.jpg)",
             "name": "Иванов Константин Борисович",
-            "ferma": "ООО «Птицефабрика»",
-            "category": "milks",
-            "distance": "1500"
+            "ferma": "Юлия Арнольдова - торты",
+            "category": "breads",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/07.jpg)",
+            "name": "Ковалева Ольга Дмитриевна",
+            "ferma": "чай РиК",
+            "category": "jams",
+            "distance": "0"
         }
     ]
 }

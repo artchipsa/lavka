@@ -151,6 +151,9 @@
         .products-grid .item{
             width: 100%;
         }
+        .products-grid .item span{
+            opacity: 1;
+        }
         
     }
 

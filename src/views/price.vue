@@ -12,52 +12,52 @@
                     table(cellspacing="0")
                         tr
                             td
-                                p.name помидоры
-                                span 1 кг
+                                p.name Йогурт
+                                span 1 шт
                             td
-                                p.price 124 Р
+                                p.price 55 Р
                         tr
                             td
-                                p.name картофель
+                                p.name Окорок Тамбовский
                                 span 1 кг
                             td
-                                p.price 24 Р
+                                p.price 550 Р
                         tr
                             td
-                                p.name капуста
+                                p.name Творог обезжиренный 1.5%
+                                span 1 кг
+                            td
+                                p.price 270 Р
+                        tr
+                            td
+                                p.name Яйцо деревенское
+                                span 10 шт
+                            td
+                                p.price 66 Р
+                        tr
+                            td
+                                p.name Колбаса Докторская
+                                span 1 кг
+                            td
+                                p.price 465 Р
+                        tr
+                            td
+                                p.name Шея свиная
+                                span 1 кг
+                            td
+                                p.price 380 Р
+                        tr
+                            td
+                                p.name Рулет Куриный
+                                span 1 кг
+                            td
+                                p.price 371 Р
+                        tr
+                            td
+                                p.name Томаты (слива) 
                                 span 1 кг
                             td
                                 p.price 150 Р
-                        tr
-                            td
-                                p.name огурцы
-                                span 1 кг
-                            td
-                                p.price 50 Р
-                        tr
-                            td
-                                p.name мед
-                                span 1 л
-                            td
-                                p.price 1 124 Р
-                        tr
-                            td
-                                p.name свекла
-                                span 1 кг
-                            td
-                                p.price 200 Р
-                        tr
-                            td
-                                p.name морковь
-                                span 1 кг
-                            td
-                                p.price 1120 Р
-                        tr
-                            td
-                                p.name редис
-                                span 1 кг
-                            td
-                                p.price 84 Р
 
 </template>
 
@@ -219,7 +219,7 @@
                         font-size: 26px;
                         display: inline-block;
                         margin-right: 60px;
-                        width: 150px;
+                        width: 65%;
                     }
                     span{
                         font-family: bebas;
@@ -274,7 +274,14 @@
             font-size: 18px;
         }
         .center-text-block.hover-overflow table td .name[data-v-637b5f72]{
-            width: 45px;
+            width: 80%;
+            margin-right: 10px;
+        }
+        .center-text-block.hover-overflow table{
+            table-layout: auto;
+        }
+        .center-text-block.hover-overflow table tr:first-child td{
+            width: 80%;
         }
 
     }

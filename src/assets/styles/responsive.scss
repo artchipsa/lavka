@@ -148,7 +148,7 @@
         display: none;
     }
     .scroll-view {
-        height: 75%;
+        height: 72%;
         width: 92%;
         margin-top: 20%;
     }
@@ -169,15 +169,22 @@
     }
     .people-block .item {
         flex-flow: row;
+        min-height: 250px;
     }
     .people-block .item img {
         width: 50%;
         display: inline-block;
     }
+    .people-block .item .img {
+        width: 50%;
+        display: inline-block;
+        height: 100%;
+    }
     .people-block .item .content {
         width: 50%;
         display: inline-block;
         padding: 30px;
+        height: 100%;
     }
     .people-block .item .content .name {
         margin-bottom: 10px;

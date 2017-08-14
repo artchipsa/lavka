@@ -11,21 +11,15 @@
     },
     "owners": {
         "tag": "частники",
-        "title": "<h2>частники</h2>",
         "owners_list": [{
-                "img": "public/ow1.jpg",
+                "img": "url(public/fermers/03.jpg)",
                 "name": "Иванов Константин Борисович",
-                "shop": "ООО «Птицефабрика»"
+                "ferma": "Пекарня №1"
             },
             {
-                "img": "public/ow2.jpg",
-                "name": "загорский михаил андреевич",
-                "shop": "ИП загорский"
-            },
-            {
-                "img": "public/ow3.jpg",
-                "name": "лапшин николай алексеевич",
-                "shop": "ООО «молоко»"
+                "img": "url(public/fermers/04.jpg)",
+                "name": "Воднев Кирилл Борисович",
+                "ferma": "Воднев хлеб"
             }
         ]
     }
