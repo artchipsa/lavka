@@ -81,7 +81,7 @@
                 setTimeout(() => {
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }, 250)
-                $('.owl-carousel').trigger('destroy.owl.carousel');
+                // $('.owl-carousel').trigger('destroy.owl.carousel');
             },
             beforeLeave(el){
                 
