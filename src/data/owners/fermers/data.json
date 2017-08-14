@@ -51,6 +51,13 @@
             "ferma": "чай РиК",
             "category": "jams",
             "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/08.jpg)",
+            "name": "Конгарова Светлана Николаевна",
+            "ferma": "Царь чай",
+            "category": "jams",
+            "distance": "0"
         }
     ]
 }

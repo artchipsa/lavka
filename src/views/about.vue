@@ -28,71 +28,13 @@
                             h2 за этот базар #[span отвечают]
                             .people-block
                                 .item
-                                    img(src="../assets/d1.jpg", alt="")
+                                    img(src="public/max.jpg", alt="")
                                     .content
-                                        .name Иванов Константин Борисович
-                                        .rank Генеральный директор
+                                        .name Максим Валерьевич Павлов
+                                        .rank Управляющий магазина
                                         .contacts
-                                            a(href="tel: 8 903 234–32–34") 8 903 234–32–34
-                                            a(href="mailto:ivanov@mail.ru") ivanov@mail.ru
-                                        .socials
-                                            ul
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-facebook(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-vk(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-odnoklassniki(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-instagram(aria-hidden="true")
-                                .item
-                                    img(src="../assets/d1.jpg", alt="")
-                                    .content
-                                        .name Иванов Константин Борисович
-                                        .rank Генеральный директор
-                                        .contacts
-                                            a(href="tel: 8 903 234–32–34") 8 903 234–32–34
-                                            a(href="mailto:ivanov@mail.ru") ivanov@mail.ru
-                                        .socials
-                                            ul
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-facebook(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-vk(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-odnoklassniki(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-instagram(aria-hidden="true")
-                                .item
-                                    img(src="../assets/d1.jpg", alt="")
-                                    .content
-                                        .name Иваноыв Константин Борисович
-                                        .rank Генеральный директор
-                                        .contacts
-                                            a(href="tel: 8 903 234–32–34") 8 903 234–32–34
-                                            a(href="mailto:ivanov@mail.ru") ivanov@mail.ru
-                                        .socials
-                                            ul
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-facebook(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-vk(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-odnoklassniki(aria-hidden="true")
-                                                li 
-                                                    a(href="")
-                                                        i.fa.fa-instagram(aria-hidden="true")
+                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
+                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
                 .left-info-block.mobile-top.big
                     .tag Кто мы
                     h1 супермакет натуральных продуктов

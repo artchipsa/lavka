@@ -9,23 +9,23 @@
                 .links-block
                     ul
                         li.active
-                            a(href="#event") новый магазин
-                        li
+                            a(href="#event") событие
+                        li(v-if="event_data.reviews_block")
                             a(href="#reviews") отзывы
             .container.text-container(v-if="event_data && Object.keys(event_data).length")
                 iscroll-view.scroll-view(ref="Scrollbar" @scroll="spy" :options="{mouseWheel: true, click: true, tap:true, scrollbars: true, probeType: 3, preventDefault: false}")
                     section#event
                         .small-title {{ event_data.event.date }}
                         .carousel-block
-                            a.event-arrow(href="#" @click.prevent="photosPrevSlide")
+                            a.event-arrow(href="#" @click.prevent="photosPrevSlide" v-if="event_data.event.photos.length > 1")
                                 i.fa.fa-chevron-left(aria-hidden="true")
-                            a.event-arrow(href="#" @click.prevent="photosNextSlide")
+                            a.event-arrow(href="#" @click.prevent="photosNextSlide" v-if="event_data.event.photos.length > 1")
                                 i.fa.fa-chevron-right(aria-hidden="true")
                             .owl-carousel.event-photos
                                 .item(v-for="photo in event_data.event.photos")
                                     img(:src="photo", alt="")
                         div(v-html="event_data.event.event_descr")
-                    section#reviews
+                    section#reviews(v-if="event_data.reviews_block")
                         h2.middle-title {{ event_data.reviews_block.title }}
                         .owl-dots
                         .owl-carousel.event-reviews
@@ -163,7 +163,7 @@
                     this.event_data = response.data;
                     const iscroll = this.$refs.Scrollbar;            
                     iscroll.refresh();
-                    $('.owl-carousel').trigger('destroy.owl.carousel');
+                    // $('.owl-carousel').trigger('destroy.owl.carousel');
                 }).catch(error => {
                     console.log(error);
                 });
@@ -288,7 +288,11 @@
             }
         }
     }
-
+    // #event{
+    //     .owl-carousel .owl-item img{
+    //         max-height: 600px;
+    //     }
+    // }
     #reviews{
         position: relative;
         .middle-title{

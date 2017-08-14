@@ -31,7 +31,7 @@
                     {
                         name: 'Открытие магазина в сентябре',
                         link: '/events/new-shop',
-                        img: 'url(public/e1.jpg)'
+                        img: 'url(public/ev_img1.jpg)'
                     },
                     {
                         name: 'фестиваль «зеленый»',
@@ -133,7 +133,7 @@
             }
         },
         mounted(){
-            $('.owl-carousel').trigger('destroy.owl.carousel');
+            // $('.owl-carousel').trigger('destroy.owl.carousel');
             this.owlInit();
             this.owl.on('translate.owl.carousel', (event) => {
                 let index = event.page.index + 1;
