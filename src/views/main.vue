@@ -112,8 +112,9 @@
                     )
                 }
             },
-            beforeEnter(){
+            beforeEnter(el){
                 clearInterval(this.interval);
+                el.style.zIndex = 0;                
                 if ($(window).width() < 500){
                     Velocity(document.querySelector('.logo'), {opacity: 1}, {display: 'block'}, {duration: 10})
                 }                
@@ -125,18 +126,17 @@
                     Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10});
                 }                
             },
-            enter(el, done){
-                Velocity(document.querySelector('.logo'), {top: '50%', translateY: '-50%', translateX: '-50%'}, {duration: 350})
-                if ($(window).width() > 500){
-                    Velocity(document.querySelector('.logo svg'), {width: 304, height: 128}, {duration: 350})
-                } else {
-                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68, opacity: 1}, {duration: 350})
-                    Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 350})
-                }
+            enter(el, done){    
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 0}, {display: 'none'},{duration: 350})
                 setTimeout(() => {
-                    done();
+                    Velocity(document.querySelector('.logo'), {top: '50%', translateY: '-50%', translateX: '-50%'}, {duration: 350, complete: done})
+                    if ($(window).width() > 500){
+                        Velocity(document.querySelector('.logo svg'), {width: 304, height: 128}, {duration: 350})
+                    } else {
+                        Velocity(document.querySelector('.logo svg'), {width: 120, height: 68, opacity: 1}, {duration: 350})
+                        Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 350})
+                    }
                 }, 600)
             },
             leave(el, done){
@@ -171,11 +171,7 @@
                             zIndex: 2
                         },
                         {
-                            duration: 550,
-                            // easing: 'easeOutElastic'
-                            // complete: () => {
-                            //     done();
-                            // }
+                            duration: 550
                         }
                     )
                     sum_duration += 150;
@@ -184,7 +180,7 @@
                     if ($(window).width() < 1367 && $(window).width() > 1024){
                         left = left + width + 135;                        
                     } else if($(window).width() < 1025) { 
-                        left = left + width + 82;                                                    
+                        left = left + width + 82;
                     } else {
                         left = left + width + 200;
                     }
@@ -192,7 +188,6 @@
                 setTimeout(() => {
                     done();
                 }, 550)
-                // Velocity(el, {opacity: 0}, {delay: 1000, duration: 110, complete: done})
             }
         },
         mounted(){
@@ -268,7 +263,7 @@
     .float{
         position: absolute;
         z-index: 1;
-        width: 130px;
+        width: 150px;
     }
 
     @media (max-width: 1367px){

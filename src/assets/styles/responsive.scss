@@ -54,6 +54,18 @@
     .people-block .item .content {
         padding: 35px 30px 35px;
     }
+    .people-block .item .content .name {
+        font-size: 22px;
+        width: 100%;
+        margin-bottom: 22px;
+    }
+    .people-block .item .content .rank {
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+    .people-block .item .content .contacts a {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 1025px) {

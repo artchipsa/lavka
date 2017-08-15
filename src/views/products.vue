@@ -210,6 +210,12 @@
                         setTimeout(() => {
                             done();
                         }, 450)
+                    } else {
+                        Velocity(document.querySelector('.bottom-panel'), { bottom: '-50%' }, { duration: 350})
+                        Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 350});
+                        setTimeout(() =>{
+                            done();
+                        }, 450);
                     }
                 } else {
                     done();             
@@ -347,7 +353,7 @@
             position: relative;
             height: 100%;
             img{
-                width: 130px;
+                width: 150px;
                 display: inline-block;
                 position: absolute;
                 top: 50%;

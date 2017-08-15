@@ -10,7 +10,7 @@
                     ul
                         li.active
                             a(href="#deals") подход
-                        li
+                        li(v-if="prod_data.owners")
                             a(href="#owners") частники
             .background(:style="{backgroundImage: prod_data.img }")
                 .overlay(v-if="over_show")

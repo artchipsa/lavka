@@ -6,7 +6,6 @@
                 .left-info-block.mobile-top.big
                     .tag цены
                     h1 вы можете ознакомиться #[br] с ценами  на товары
-                    router-link(to="/about") список цен
                 .center-text-block.hover-overflow
                     h2 Для #[br] натурального #[br]  #[span очень #[br] недорого]
                     table(cellspacing="0")

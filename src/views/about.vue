@@ -28,7 +28,7 @@
                             h2 за этот базар #[span отвечают]
                             .people-block
                                 .item
-                                    img(src="public/max.jpg", alt="")
+                                    .img(style="background-image: url(public/max.jpg)")
                                     .content
                                         .name Максим Валерьевич Павлов
                                         .rank Управляющий магазина
@@ -88,7 +88,6 @@
                 $('.scroll-view section').each(function(){
                     let offset = $(this).offset().top;
                     let id = $(this).attr('id');
-                    console.log(id);
                     if( offset >= top_edge & offset <= bottom_edge){
                         $('.inner-right-sidebar li').removeClass('active');
                         $('a[href$='+id+']').parent().addClass('active');

@@ -849,6 +849,12 @@
     .smaller h2{
         font-size: 4vw;
     }
+    .owl-item{
+		cursor: url(/public/cursor_left_right.svg) 22 8 , move;
+		&:active, &:focus{
+			cursor: url(/public/cursor_left_right2.svg) 22 8, move;
+		}
+	}
     @media (max-width: 1367px){
 
         .right-menu .socials-block ul li{
