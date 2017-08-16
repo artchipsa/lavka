@@ -183,6 +183,9 @@
         flex-flow: row;
         height: 255px;
     }
+    .people-block {
+        align-items: unset;
+    }
     .people-block .item img {
         width: 50%;
         display: inline-block;
