@@ -35,6 +35,22 @@
                                         .contacts
                                             a(href="tel: 8 903 234–32–34") +7 929 338-23-26
                                             a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
+                                .item
+                                    .img(style="background-image: url(public/max.jpg)")
+                                    .content
+                                        .name Алексей Хрульков
+                                        .rank Руководитель направления закупок и логистики
+                                        .contacts
+                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
+                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
+                                .item
+                                    .img(style="background-image: url(public/ow2.jpg)")
+                                    .content
+                                        .name Дмитрий Васильевич Вербицкий
+                                        .rank Основатель проекта
+                                        .contacts
+                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
+                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
                 .left-info-block.mobile-top.big
                     .tag Кто мы
                     h1 супермакет натуральных продуктов
@@ -265,21 +281,21 @@
                 display: block;
             }
             .content{
-                padding: 49px 30px 35px 30px;
+                padding: 30px;
                 background-color: $light-cyan;
                 .name{
                     font-family: bebas;
                     font-weight: 800;
                     font-size: 26px;
                     color: $black;
-                    width: 65%;
-                    margin-bottom: 34px;
+                    width: 100%;
+                    margin-bottom: 20px;
                 }
                 .rank{
                     font-size: 20px;
                     color: $black;
                     opacity: .4;
-                    margin-bottom: 64px;
+                    margin-bottom: 34px;
                 }
                 .contacts{
                     margin-bottom: 20px;

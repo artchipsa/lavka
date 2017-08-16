@@ -744,7 +744,7 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
-            min-height: 590px;
+            min-height: 610px;
             img{
                 width: 100%;
                 display: block;
@@ -755,7 +755,7 @@
                 background-position: 50% 0%;
             }
             .content{
-                padding: 49px 30px 35px 30px;
+                padding: 30px;
                 min-height: 40%;
                 height: 40%;
                 background-color: $light-cyan;
@@ -764,7 +764,7 @@
                     font-weight: 800;
                     font-size: 28px;
                     color: $black;
-                    width: 60%;
+                    width: 100%;
                     margin-bottom: 34px;
                 }
                 .rank{
