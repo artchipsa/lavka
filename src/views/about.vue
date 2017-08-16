@@ -31,7 +31,7 @@
                                     .img(style="background-image: url(public/max.jpg)")
                                     .content
                                         .name Максим Валерьевич Павлов
-                                        .rank Управляющий магазина
+                                        .rank Управляющий проектом
                                         .contacts
                                             a(href="tel: 8 903 234–32–34") +7 929 338-23-26
                                             a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
