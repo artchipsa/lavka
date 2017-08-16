@@ -415,8 +415,9 @@
             vertical-align: middle;
             width: 132px;
             height: 132px;
-            background-position: center 0;
+            background-position: 50% 0;
             background-size: cover;
+            background-repeat: no-repeat;
             border-radius: 50%;
             margin-right: 40px;
         }
@@ -501,6 +502,13 @@
             margin-right: 20px;
             width: 32%;
         }
+        .map_info .owner .img{
+            width: 110px;
+            height: 110px;
+        }
+        .map_info .owner-info{
+            width: 55%;
+        }
         .map_info .owner-info .owner-name{
             font-size: 24px;
         }
@@ -522,6 +530,11 @@
 
         .map_info .close img{
             margin-right: 10px;
+        }
+         .map_info .owner .img{
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
         }
         .map_info .close{
             top: 87px;

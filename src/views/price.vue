@@ -258,7 +258,6 @@
         .center-text-block{
             height: 80%;
         }
-
         .center-text-block.hover-overflow{
             &:hover{
                 h2{
@@ -282,7 +281,14 @@
         .center-text-block.hover-overflow table tr:first-child td{
             width: 80%;
         }
-
+        .center-text-block.hover-overflow{
+            h2{
+                transform: translateY(-400%);                    
+            }
+            table{
+                transform: translateY(-80%);                    
+            }
+        }
     }
 
     @media (max-width: 321px){

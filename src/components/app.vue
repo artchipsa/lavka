@@ -44,21 +44,13 @@
                         icon: 'fa-instagram',
                         url: 'https://www.instagram.com/lavochka_net/'
                     },
-                     {
-                        icon: 'fa-twitter',
-                        url: ''
-                    },
-                     {
+                    {
                         icon: 'fa-facebook-official',
                         url: 'https://www.facebook.com/lavochka.net'
                     },
-                     {
+                    {
                         icon: 'fa-vk',
                         url: 'https://vk.com/lavochka_net'
-                    },
-                     {
-                        icon: 'fa-odnoklassniki',
-                        url: ''
                     }
                 ],
                 links:[
