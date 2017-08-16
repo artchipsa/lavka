@@ -5,42 +5,42 @@
     },
     "fermers": [{
             "img": "url(public/fermers/01.jpg)",
-            "name": "Иванов Константин Борисович",
+            "name": "Вербицкий Дмитрий Васильевич",
             "ferma": "Вербицкие",
             "category": "meats",
             "distance": "0"
         },
         {
             "img": "url(public/fermers/02.jpg)",
-            "name": "Иванов Константин Борисович",
+            "name": "Воронцова Екатерина",
             "ferma": "Пекарня Vivo and Jolly",
             "category": "breads",
             "distance": "0"
         },
         {
             "img": "url(public/fermers/03.jpg)",
-            "name": "Иванов Константин Борисович",
+            "name": "Сергей Гаврицкий",
             "ferma": "Пекарня №1",
             "category": "breads",
             "distance": "0"
         },
         {
             "img": "url(public/fermers/04.jpg)",
-            "name": "Воднев Кирилл Борисович",
+            "name": "Воднев Кирилл",
             "ferma": "Воднев хлеб",
             "category": "breads",
             "distance": "0"
         },
         {
             "img": "url(public/fermers/05.jpg)",
-            "name": "Вальтер Игорь Борисович",
+            "name": "Вальтер Игорь",
             "ferma": "Вальтер Игорь",
             "category": "veges",
             "distance": "0"
         },
         {
             "img": "url(public/fermers/06.jpg)",
-            "name": "Иванов Константин Борисович",
+            "name": "Арнольдова Юлия",
             "ferma": "Юлия Арнольдова - торты",
             "category": "breads",
             "distance": "0"
