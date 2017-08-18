@@ -2,7 +2,7 @@
 	transition(v-on:before-enter="beforeEnter" v-on:before-leave="beforeLeave" v-on:enter="enter" v-on:leave="leave" mode="out-in" v-bind:css="false" appear)
 		.view(:style="{backgroundColor: color}")
 			.inner-right-sidebar
-				router-link(:to="from").close
+				router-link(to="/owners").close
 					.icon
 						include ../assets/close.svg
 					span назад
@@ -19,7 +19,7 @@
 					section
 						.people-block
 							.error-message По данному виду не найден ни один частник ;(
-							.item(v-for="fermer in ferm_data.fermers" v-bind:data-category="fermer.category" v-bind:data-distance="fermer.distance")
+							router-link.item(:to="fermer.link" v-for="fermer in ferm_data.fermers" v-bind:data-category="fermer.category" v-bind:data-distance="fermer.distance")
 								.img(:style="{backgroundImage: fermer.img}")
 								.content
 									.name {{ fermer.name }}
@@ -219,9 +219,6 @@
 
             const iscroll = this.$refs.Scrollbar;            
             iscroll.refresh();
-
-            $()
-
         },
         mounted(){
             let iscroll

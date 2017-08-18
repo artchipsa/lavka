@@ -10,10 +10,6 @@
             img.float(src="../assets/m4.png", alt="")
             img.float(src="../assets/m5.png", alt="")
             img.float(src="../assets/m6.png", alt="")
-            img.float(src="../assets/m7.png", alt="")
-            img.float(src="../assets/m6.png", alt="")
-            img.float(src="../assets/m4.png", alt="")
-            img.float(src="../assets/m8.png", alt="")
             .container
                 a(href="#").small-message
                     .tag Ближайшее событие
@@ -84,33 +80,57 @@
             setPosProducts(){
                 let elems = document.querySelectorAll('.float');
                 for (let i = 0; i < elems.length; i++) {
-                    elems[i].style.left = Math.random() * (window.innerWidth + 50) - 50 + 'px';
-                    elems[i].style.top = Math.random() * (window.innerHeight + 50) - 50 + 'px';
+                    let X = Math.random() * (window.innerWidth + 50) - 50 + 'px';
+                    let Y = Math.random() * (window.innerHeight + 50) - 50 + 'px';
+                    Velocity(elems[i], {translateY: Y, translateX: X}, {duration: 1});
                 }
             },
             floatProducts(){
-                let elems = document.querySelectorAll('.float');
-                for (let i = 0; i < elems.length; i++) {
-                    let left = parseInt(elems[i].style.left);
-                    let top = parseInt(elems[i].style.top);
+                $('.float').each(function(){
+                    let transform = $(this).css('transform').split(/[()]/)[1];
+                    let X = parseInt(transform.split(',')[4]);
+                    let Y = parseInt(transform.split(',')[5]);
                     let left_direction = Math.random() < 0.5 ? -1 : 1;
                     let top_direction = Math.random() < 0.5 ? -1 : 1;
-                    let left_step = Math.random() * (50 - 25) + 25;
-                    let top_step = Math.random() * (50 - 25) + 25;
+                    let left_step = Math.random() * (90 - 25) + 25;
+                    let top_step = Math.random() * (90 - 25) + 25;
                     let duration = left_step * top_step;
-                    Velocity(elems[i],
+                    Velocity($(this),
                         {
-                            translateZ: 0,
-                            top: top + (top_step * top_direction),
-                            left: left + (left_step * left_direction),
-                            // rotate: (left_direction * 22.5) + 'deg'
+                            translateY: Y + (top_step * top_direction),
+                            translateX: X + (left_step * left_direction),
                         },
                         { 
-                            duration: 2500,
-                            easing: 'linear'
+                            duration: 4500,
+                            easing: 'easeInOutQuad'
                         }
                     )
-                }
+
+                });
+                // for (let i = 0; i < elems.length; i++) {
+                //     let style = elems[i].style;
+                //     let regexTranslateY = /\.*translateY\((.*)px\)/i;
+                //     let regexTranslateX = /\.*translateX\((.*)px\)/i;                    
+                //     let Y = regexTranslateY.exec(style);
+                //     let X = regexTranslateX.exec(style);
+                //     console.log(Y, X);
+                //     let left_direction = Math.random() < 0.5 ? -1 : 1;
+                //     let top_direction = Math.random() < 0.5 ? -1 : 1;
+                //     let left_step = Math.random() * (50 - 25) + 25;
+                //     let top_step = Math.random() * (50 - 25) + 25;
+                //     let duration = left_step * top_step;
+                //     Velocity(elems[i],
+                //         {
+                //             translateZ: 0,
+                //             translateY: Y + (top_step * top_direction),
+                //             translateX: X + (left_step * left_direction),
+                //         },
+                //         { 
+                //             duration: 2500,
+                //             easing: 'linear'
+                //         }
+                //     )
+                // }
             },
             beforeEnter(el){
                 clearInterval(this.interval);
@@ -153,21 +173,22 @@
                 Velocity(document.querySelector('.logo-text'), {opacity: 1}, {display: 'block'},{duration: 350})
                 var left;
                 if ($(window).width() < 1367 && $(window).width() > 1024){
-                        left = 135;                        
+                        left = 130;                        
                     } else if($(window).width() < 1025) { 
                         left = 82;                                                    
                     } else {
-                        left = 200;
+                        left = 180;
                     }
                 var sum_duration = 0;
                 for (let i = 0; i < elems.length; i++) {
                     var width = elems[i].offsetWidth;
+                    var half = ($(window).height()/2) - (elems[i].clientHeight/2);
                     Velocity(elems[i], 'stop');
                     Velocity(elems[i],
                         {
-                            top: '50%',
-                            translateY: '-50%',
-                            left: left,
+                            top: '0px',
+                            translateX: left,
+                            translateY: half,
                             zIndex: 2
                         },
                         {
@@ -182,7 +203,7 @@
                     } else if($(window).width() < 1025) { 
                         left = left + width + 82;
                     } else {
-                        left = left + width + 200;
+                        left = left + width + 185;
                     }
                 }
                 setTimeout(() => {
@@ -194,8 +215,10 @@
             this.eventShow();
             this.setPosProducts();
             if ($(window).width() > 600){
-                this.floatProducts();
-                this.interval = setInterval(this.floatProducts, 2500);
+                setTimeout(() => {
+                    this.floatProducts();
+                }, 10)
+                this.interval = setInterval(this.floatProducts, 4500);
             }
 
         }

@@ -1,0 +1,17 @@
+{
+    "description": {
+        "name": "Ковалева Ольга Дмитриевна",
+        "adress": "Россия, Красноярский Край, село луговое",
+        "farm": "чай РиК"
+    },
+    "products": {
+        "tag": "виды продуктов частника",
+        "products_list": [{
+            "name": "Чай",
+            "url": "/products/jams/tea"
+        }]
+    },
+    "imgs": [
+        "url(public/fermers/7/1.jpg)"
+    ]
+}

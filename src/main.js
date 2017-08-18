@@ -6,6 +6,7 @@ import IScrollView from 'vue-iscroll-view';
 import IScroll from 'iscroll/build/iscroll-probe.js';
 import SocialSharing from 'vue-social-sharing';
 import vSelect from 'vue-select';
+import VueTouch from 'vue-touch';
 
 // views
 import main from './views/main.vue';
@@ -21,7 +22,7 @@ import product_section from './views/product_section.vue';
 import product from './views/product.vue';
 import event from './views/event.vue';
 import fermers from './views/fermers.vue';
-import VueTouch from 'vue-touch';
+import fermer_inside from './views/fermer_inside.vue';
 
 
 Vue.use(VueRouter)
@@ -54,6 +55,10 @@ const router = new VueRouter({
         {
             path: '/owners/fermers',
             component: fermers
+        },
+        {
+            path: '/owners/fermers/:id',
+            component: fermer_inside
         },
         {
             path: '/prices',

@@ -14,7 +14,7 @@
                 .left-info-block.mobile-top.big
                     .tag продукция
                     h1 {{ prod_data.description.name }}
-                    span {{ prod_data.description.small_message }}
+                    //- span {{ prod_data.description.small_message }}
 </template>
 
 <script>

@@ -109,6 +109,10 @@
         p{
             padding-right: 20px;
             margin-bottom: 30px;
+            color: $black;
+            font-size: 16px;
+            font-family: din;
+            font-weight: 400;
         }
     }
 

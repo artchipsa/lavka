@@ -375,7 +375,9 @@
             }
         }
     }
-
+    .background{
+        background-size: cover;
+    }
     .right-menu{
         position: absolute;
         right: 0px;
@@ -466,7 +468,7 @@
         position: absolute;
         bottom: 8%;
         left: 3%;
-        width: 250px;
+        width: 200px;
         z-index: 1;
         &.white{
             a{
@@ -495,6 +497,16 @@
             margin: 0px;
             margin-bottom: 50px;
             color: $brown;
+        }
+        p{
+            font-family: bebas;
+            font-weight: 800;
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
         }
         a{
             font-family: bebas;
@@ -745,6 +757,7 @@
             flex-direction: column;
             align-items: stretch;
             min-height: 610px;
+            text-decoration: none;
             img{
                 width: 100%;
                 display: block;

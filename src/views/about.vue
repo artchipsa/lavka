@@ -33,24 +33,24 @@
                                         .name Максим Валерьевич Павлов
                                         .rank Управляющий проектом
                                         .contacts
-                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
-                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
+                                            a(href="tel:+7 929 338-23-26") +7 929 338-23-26
+                                            a(href="mailto:maxpavlovval@mail.ru") maxpavlovval@mail.ru
                                 .item
                                     .img(style="background-image: url(public/max.jpg)")
                                     .content
                                         .name Алексей Хрульков
                                         .rank Руководитель направления закупок и логистики
                                         .contacts
-                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
-                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
+                                            a(href="tel:+7 929 338-23-26") +7 929 338-23-26
+                                            a(href="mailto:alexeynh@bk.ru") alexeynh@bk.ru
                                 .item
                                     .img(style="background-image: url(public/ow2.jpg)")
                                     .content
                                         .name Дмитрий Васильевич Вербицкий
                                         .rank Основатель проекта
                                         .contacts
-                                            a(href="tel: 8 903 234–32–34") +7 929 338-23-26
-                                            a(href="mailto:ivanov@mail.ru") maxpavlovval@mail.ru
+                                            a(href="tel:8 913 532 80 00") +7 913 532 80 00
+                                            a(href="mailto:ooo.diva@mail.ru") ooo.diva@mail.ru
                 .left-info-block.mobile-top.big
                     .tag Кто мы
                     h1 супермакет натуральных продуктов
@@ -107,10 +107,8 @@
                     if( offset >= top_edge & offset <= bottom_edge){
                         $('.inner-right-sidebar li').removeClass('active');
                         $('a[href$='+id+']').parent().addClass('active');
-                    } 
-                    
+                    }   
                 })
-
             },
             // goToSection(event){
                 

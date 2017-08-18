@@ -22,27 +22,27 @@
                         .center-text-block
                             h2 мы сотрудничаем только #[span персонально] #[br] с конкретными людьми. #[br] хозяин отвечает за все
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)")
+                .item(style="background-image: url(public/p3.jpg)")
                     .container
                         .center-text-block
                             h2 мы боремся за доступность цен, но главное – #[span качество, вкус и натуральность продуктов]
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)")
+                .item(style="background-image: url(public/p4.jpg)")
                     .container
                         .center-text-block
                             h2 поставщик продуктов короткого хранения#[br]не может находиться#[br]дальше #[span 1000 км] #[br]от магазина
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)")
+                .item(style="background-image: url(public/p5.jpg)")
                     .container
                         .center-text-block
                             h2 у нас #[span нет] продуктов, #[br] которые изготовлены с использованием химических консервантов
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)")
+                .item(style="background-image: url(public/p6.jpg)")
                     .container
                         .center-text-block
                             h2 В супермаркетах «Частная Лавочка» принципиально нет склада. Свежие продукты подвозятся в магазин #[span каждый день ранним утром]   
                     .overlay
-                .item(style="background-image: url(public/p2.jpg)" v-if="mobile")
+                .item(style="background-image: url(public/p7.jpg)" v-if="mobile")
                     .container
                         .center-text-block.big
                             .row
@@ -223,6 +223,7 @@
             position: relative;
             height: 100%;
             width: 100%;
+            background-size: cover;
             .container{
                 z-index: 1;
                 .center-text-block{

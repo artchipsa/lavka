@@ -5,13 +5,6 @@
         img.float(src="../assets/m1.png", alt="")
         img.float(src="../assets/m2.png", alt="")
         img.float(src="../assets/m3.png", alt="")
-        img.float(src="../assets/m4.png", alt="")
-        img.float(src="../assets/m5.png", alt="")
-        img.float(src="../assets/m6.png", alt="")
-        img.float(src="../assets/m7.png", alt="")
-        img.float(src="../assets/m6.png", alt="")
-        img.float(src="../assets/m4.png", alt="")
-        img.float(src="../assets/m8.png", alt="")
 </template>
 
 <script>
@@ -55,12 +48,12 @@
             }
         },
         created(){
-            this.interval = setInterval(this.floatProducts, 2500);
+            // this.interval = setInterval(this.floatProducts, 2500);
         },
         mounted(){
-            this.setPosProducts();
-            this.floatProducts();
-            this.interval = setInterval(this.floatProducts, 2500);
+            // this.setPosProducts();
+            // this.floatProducts();
+            // this.interval = setInterval(this.floatProducts, 2500);
         }
     }
 </script>
@@ -75,6 +68,28 @@
             position: absolute;
             z-index: 0;
             width: 130px;
+            &:nth-child(1){
+                top: 22%;
+                left: -2%;
+            }
+             &:nth-child(2){
+                top: 2%;
+                left: 17%;
+                transform: rotate(45deg);
+            }
+             &:nth-child(3){
+                top: 77%;
+                right: 20%;
+            }
+             &:nth-child(4){
+                top: 25%;
+                left: 81%;
+                transform: rotate(-57deg);
+            }
+             &:nth-child(5){
+                top: 92%;
+                left: 17%;
+            }
         }
     }
 
