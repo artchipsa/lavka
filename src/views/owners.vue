@@ -163,6 +163,14 @@
                 }
             }
         },
+        created(){
+            let img = [];
+            for (let i = 1; i < 16; i++) {
+                var src = 'public/f'+i+'.jpg';
+                img[i] = new Image();
+                img[i].src = src;
+            }
+        },
         mounted(){
             this.interval = setInterval(this.switchPhotos, 2000);
         }
