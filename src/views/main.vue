@@ -211,6 +211,15 @@
                 }, 550)
             }
         },
+        created(){
+            let img = [];
+            $('.float').each(function(){
+                var id = $(this).index($('.float'));
+                var src = $(this).attr('src');
+                img[id] = new Image();
+                img[id].src = src;
+            });
+        },
         mounted(){
             this.eventShow();
             this.setPosProducts();
