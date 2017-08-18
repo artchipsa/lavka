@@ -5,7 +5,7 @@
     },
     "fermers": [{
             "img": "url(public/fermers/01.jpg)",
-            "link": "fermers/verbickie",
+            "link": "/owners/fermers/verbickie",
             "name": "Вербицкий Дмитрий Васильевич",
             "ferma": "Вербицкие",
             "category": "meats",
@@ -13,7 +13,7 @@
         },
         {
             "img": "url(public/fermers/02.jpg)",
-            "link": "fermers/vivoandjolly",
+            "link": "/owners/fermers/vivoandjolly",
             "name": "Воронцова Екатерина",
             "ferma": "Пекарня Vivo and Jolly",
             "category": "breads",
@@ -21,7 +21,7 @@
         },
         {
             "img": "url(public/fermers/03.jpg)",
-            "link": "fermers/pekarna1",
+            "link": "/owners/fermers/pekarna1",
             "name": "Сергей Гаврицкий",
             "ferma": "Пекарня №1",
             "category": "breads",
@@ -29,7 +29,7 @@
         },
         {
             "img": "url(public/fermers/04.jpg)",
-            "link": "fermers/vodnev",
+            "link": "/owners/fermers/vodnev",
             "name": "Воднев Кирилл",
             "ferma": "Воднев хлеб",
             "category": "breads",
@@ -37,7 +37,7 @@
         },
         {
             "img": "url(public/fermers/05.jpg)",
-            "link": "fermers/valter",
+            "link": "/owners/fermers/valter",
             "name": "Вальтер Игорь",
             "ferma": "Вальтер Игорь",
             "category": "veges",
@@ -45,7 +45,7 @@
         },
         {
             "img": "url(public/fermers/06.jpg)",
-            "link": "fermers/arnoldova",
+            "link": "/owners/fermers/arnoldova",
             "name": "Арнольдова Юлия",
             "ferma": "Юлия Арнольдова - торты",
             "category": "breads",
@@ -53,7 +53,7 @@
         },
         {
             "img": "url(public/fermers/07.jpg)",
-            "link": "fermers/ric",
+            "link": "/owners/fermers/ric",
             "name": "Ковалева Ольга Дмитриевна",
             "ferma": "чай РиК",
             "category": "jams",
@@ -61,7 +61,7 @@
         },
         {
             "img": "url(public/fermers/08.jpg)",
-            "link": "fermers/tzartea",
+            "link": "/owners/fermers/tzartea",
             "name": "Конгарова Светлана Николаевна",
             "ferma": "Царь чай",
             "category": "jams",

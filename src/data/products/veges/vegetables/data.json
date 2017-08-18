@@ -13,7 +13,8 @@
         "tag": "частники",
         "owners_list": [{
             "img": "url(public/fermers/05.jpg)",
-            "name": "Вальтер Игорь Борисович",
+            "link": "/owners/fermers/valter",
+            "name": "Вальтер Игорь",
             "ferma": "Вальтер Игорь"
         }]
     }

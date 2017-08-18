@@ -12,7 +12,8 @@
         "tag": "частники",
         "owners_list": [{
             "img": "url(public/fermers/04.jpg)",
-            "name": "Воднев Кирилл Борисович",
+            "link": "/owners/fermers/vodnev",
+            "name": "Воднев Кирилл",
             "ferma": "Воднев хлеб"
         }]
     }

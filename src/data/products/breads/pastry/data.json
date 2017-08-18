@@ -13,12 +13,14 @@
         "tag": "частники",
         "owners_list": [{
                 "img": "url(public/fermers/02.jpg)",
-                "name": "Иванов Константин Борисович",
+                "link": "/owners/fermers/vivoandjolly",
+                "name": "Воронцова Екатерина",
                 "ferma": "Пекарня Vivo and Jolly"
             },
             {
                 "img": "url(public/fermers/06.jpg)",
-                "name": "Иванов Константин Борисович",
+                "link": "/owners/fermers/arnoldova",
+                "name": "Юлия Арнольдова",
                 "ferma": "Юлия Арнольдова - торты"
             }
         ]

@@ -24,7 +24,7 @@
                         .small-title {{ prod_data.owners.tag }}
                         div(v-html="prod_data.owners.title")
                         .people-block.invert
-                            .item(v-for="owner in prod_data.owners.owners_list")
+                            router-link.item(v-for="owner in prod_data.owners.owners_list" :to="owner.link")
                                 //- img(:src="owner.img", alt="")
                                 .img(:style="{backgroundImage: owner.img}")
                                 .content

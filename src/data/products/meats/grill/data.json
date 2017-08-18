@@ -13,7 +13,8 @@
         "tag": "частники",
         "owners_list": [{
             "img": "url(public/fermers/01.jpg)",
-            "name": "Иванов Константин Борисович",
+            "link": "/owners/fermers/verbickie",
+            "name": "Вербицкий Дмитрий Васильевич",
             "ferma": "Вербицкие"
         }]
     }

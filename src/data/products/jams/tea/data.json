@@ -12,9 +12,17 @@
     "owners": {
         "tag": "частники",
         "owners_list": [{
-            "img": "url(public/fermers/07.jpg)",
-            "name": "Ковалева Ольга Дмитриевна",
-            "ferma": "чай РиК"
-        }]
+                "img": "url(public/fermers/07.jpg)",
+                "name": "Ковалева Ольга Дмитриевна",
+                "link": "/owners/fermers/ric",
+                "ferma": "чай РиК"
+            },
+            {
+                "img": "url(public/fermers/08.jpg)",
+                "link": "/owners/fermers/tzartea",
+                "name": "Конгарова Светлана Николаевна",
+                "ferma": "Царь чай"
+            }
+        ]
     }
 }

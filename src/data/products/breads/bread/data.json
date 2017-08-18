@@ -13,12 +13,14 @@
         "tag": "частники",
         "owners_list": [{
                 "img": "url(public/fermers/03.jpg)",
-                "name": "Иванов Константин Борисович",
+                "link": "/owners/fermers/pekarna1",
+                "name": "Сергей Гаврицкий",
                 "ferma": "Пекарня №1"
             },
             {
                 "img": "url(public/fermers/04.jpg)",
-                "name": "Воднев Кирилл Борисович",
+                "link": "/owners/fermers/vodnev",
+                "name": "Воднев Кирилл",
                 "ferma": "Воднев хлеб"
             }
         ]
