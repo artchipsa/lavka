@@ -118,7 +118,7 @@
                     }
                 ],
                 productText: 'плоды и растения',
-                productLink: '',
+                productLink: '/products/veges',
             }
         },
         beforeRouteLeave(to, from, next){
@@ -233,7 +233,11 @@
                         },
                         600:{
                             items: 6,
-                            autoWidth:false,
+                            autoWidth:true,
+                        },
+                        1000:{
+                            items: 6,
+                            autoWidth: false
                         }
                     },
                     dotsContainer: '.owl-dots'
@@ -263,6 +267,7 @@
                 var sections = document.querySelectorAll('.category-link');
                 this.productText = this.products[index].name;
                 this.productLink = this.products[index].link;
+                console.log(this.products[index].link);
                 sections.forEach((element) => {
                     element.classList.remove('active');
                    if (element.dataset.section == this.products[index].category){
@@ -460,6 +465,10 @@
         .product-carousel {
             top: 51%;
             left: 50%;
+        }
+
+        .product-carousel .item{
+            width: 190px;
         }
 
     }

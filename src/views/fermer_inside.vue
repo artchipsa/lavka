@@ -198,6 +198,7 @@
             width: 100%;
             height: 100%;
             background-size: cover;
+            background-position: center;
         }
     }
     
@@ -224,6 +225,28 @@
                 text-decoration: none;
                 transition: all .35s;
             }
+        }
+    }
+
+    @media (max-width: 769px){
+        .scroll-view section#photo{
+            min-height: 65vh;
+        }
+        .scroll-view section{
+            margin-bottom: 10%;
+        }
+    }
+
+    @media (max-width: 469px){
+        .count[data-v-6e856d5c]{
+            font-size: 8.6vw;
+        }
+        .prod_list li a[data-v-6e856d5c]{
+            font-size: 7.4vw;
+            text-decoration: underline;
+        }
+        .scroll-view section#photo[data-v-6e856d5c]{
+            min-height: 60vh;
         }
     }
 

@@ -251,6 +251,24 @@
         }
     }
     
+    @media (max-width: 1025px){
+        .center-text-block.hover-overflow table td .name, .center-text-block.hover-overflow table td .price, .center-text-block.hover-overflow table td span{
+            font-size: 20px;
+        }
+        .center-text-block.hover-overflow table td .name{
+            margin-right: 22px;
+            width: 76%;
+        }
+        .center-text-block.hover-overflow{
+            h2{
+                transform: translateY(-400%);                    
+            }
+            table{
+                transform: translateY(-40%);                    
+            }
+        }
+    }
+
     @import 'src/assets/styles/responsive.scss';    
 
     @media (max-width: 469px){

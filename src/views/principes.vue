@@ -297,7 +297,7 @@
             height: auto;
         }
         .count{
-            top: 36%;
+            top: 32%;
             font-size: 9.5vw;
         }
         .black-carousel .item .container .center-text-block h2{

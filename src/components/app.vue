@@ -764,6 +764,7 @@
             }
             .img{
                 height: 60%;
+                width: 100%;
                 background-size: cover;
                 background-position: 50% 0%;
             }

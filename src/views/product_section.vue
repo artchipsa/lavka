@@ -135,6 +135,9 @@
         .products-grid .item {
             width: 50%;
         }
+        .products-grid .item span{
+            opacity: 1;
+        }
     }
 
     @media (max-width: 769px){
@@ -150,9 +153,6 @@
 
         .products-grid .item{
             width: 100%;
-        }
-        .products-grid .item span{
-            opacity: 1;
         }
         
     }

@@ -302,8 +302,18 @@
         .float{
             width: 100px;
         }
+        .logo{
+            top: 48%;
+            left: 47.5%;
+        }
     }
+    @media (max-width: 1024px){
 
+        .logo{
+            top: 50%;
+        }
+
+    }
     @import 'src/assets/styles/responsive.scss';    
 
     @media (max-width: 469px){
@@ -312,6 +322,7 @@
         }
         .logo{
             display: block;
+            
         }
         .logo svg{
             width: 120px;

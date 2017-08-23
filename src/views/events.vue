@@ -84,7 +84,6 @@
                     Velocity($(el).find('.center-text-block'), {translateY: '-200%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
-                $('.owl-carousel').trigger('destroy.owl.carousel');
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
@@ -133,7 +132,6 @@
             }
         },
         mounted(){
-            // $('.owl-carousel').trigger('destroy.owl.carousel');
             this.owlInit();
             this.owl.on('translate.owl.carousel', (event) => {
                 let index = event.page.index + 1;

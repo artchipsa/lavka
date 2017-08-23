@@ -69,6 +69,12 @@
     .people-block .item .content .contacts a {
         font-size: 16px;
     }
+    .small-message span {
+        font-size: 22px;
+    }
+    .small-message .tag {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 1025px) {
@@ -106,6 +112,10 @@
     .center-text-block {
         left: 54%;
     }
+    .center-text-block p {
+        font-size: 16px;
+        line-height: 160%;
+    }
     .scroll-view {
         margin-bottom: 0px;
         margin-top: 15%;
@@ -115,6 +125,12 @@
     }
     .scroll-view p {
         width: 100%;
+    }
+    .small-message span {
+        font-size: 22px;
+    }
+    .small-message .tag {
+        font-size: 16px;
     }
 }
 

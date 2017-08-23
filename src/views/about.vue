@@ -36,20 +36,20 @@
                                             a(href="tel:+7 929 338-23-26") +7 929 338-23-26
                                             a(href="mailto:maxpavlovval@mail.ru") maxpavlovval@mail.ru
                                 .item
-                                    .img(style="background-image: url(public/max.jpg)")
+                                    .img(style="background-image: url(public/ow1.jpg)")
                                     .content
                                         .name Алексей Хрульков
                                         .rank Руководитель направления закупок и логистики
                                         .contacts
-                                            a(href="tel:+7 929 338-23-26") +7 929 338-23-26
-                                            a(href="mailto:alexeynh@bk.ru") alexeynh@bk.ru
+                                            a(href="tel:+7 923 354-25-27") +7 923 354-25-27
+                                            //- a(href="mailto:alexeynh@bk.ru") alexeynh@bk.ru
                                 .item
                                     .img(style="background-image: url(public/ow2.jpg)")
                                     .content
                                         .name Дмитрий Васильевич Вербицкий
                                         .rank Основатель проекта
                                         .contacts
-                                            a(href="tel:8 913 532 80 00") +7 913 532 80 00
+                                            a(href="tel:8 913 532 80 00") +7 913 532-80-00
                                             a(href="mailto:ooo.diva@mail.ru") ooo.diva@mail.ru
                 .left-info-block.mobile-top.big
                     .tag Кто мы

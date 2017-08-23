@@ -216,8 +216,8 @@
                         owner_name: 'Максим Павлов',
                         owner_status: 'управляющий',
                         shop_story: 'Наш магазин откроется в Покровском по адресу ул. Дмитрия Мартынова, 18. Свежие фрукты и овощи, деревенское молоко, мясные деликатесы без добавок — мы готовим много вкусного и интересного.',
-                        email: 'maxpavlovval@mail.ru',
-                        phones: ['+7 929 338-23-26']
+                        email: 'info@lavochkamarket.ru',
+                        phones: ['209-18-00']
                     }
                 ],
                 big_marker: '../src/assets/big_marker.png',
@@ -304,6 +304,10 @@
                     center: center,
                     disableDefaultUI: true,
                     scrollwheel: false,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
                     styles: self.style
                 });
 
@@ -487,6 +491,7 @@
         .map_info{
             right: 0%;
             width: 100%;
+            height: 100%;
             z-index: 5;
             padding: 3%;
             padding-bottom: 60px;
@@ -505,6 +510,7 @@
         .map_info .owner .img{
             width: 110px;
             height: 110px;
+            background-size: cover;
         }
         .map_info .owner-info{
             width: 55%;

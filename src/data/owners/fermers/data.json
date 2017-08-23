@@ -66,6 +66,14 @@
             "ferma": "Царь чай",
             "category": "jams",
             "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/09.jpg)",
+            "link": "/owners/fermers/stankus",
+            "name": "Станкус Олег",
+            "ferma": "ИП Станкус",
+            "category": "fish",
+            "distance": "0"
         }
     ]
 }
