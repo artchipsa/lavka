@@ -161,9 +161,9 @@
                 Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 10});
             },
             enter(el, done){
-                if ($(window).width() < 500){
-                    Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
-                }
+                // if ($(window).width() < 500){
+                //     Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
+                // }
                 if (this.flow == 'forward'){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
