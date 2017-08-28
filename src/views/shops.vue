@@ -558,8 +558,8 @@
         .map_info .owner .img{
             width: 110px;
             height: 110px;
-            background-size: 100%;
             background-position: 0% 0%;
+            background-size: 100% auto;
         }
         .map_info .owner-info{
             width: 55%;
