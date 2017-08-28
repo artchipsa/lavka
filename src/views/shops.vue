@@ -131,6 +131,54 @@
                         ]
                     },
                     {
+        "featureType": "landscape.man_made",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "weight": "0.01"
+            },
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "weight": "0.01"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+                    {
                         "elementType": "labels.text.stroke",
                         "stylers": [
                             {
@@ -510,7 +558,8 @@
         .map_info .owner .img{
             width: 110px;
             height: 110px;
-            background-size: cover;
+            background-size: 100%;
+            background-position: 100% 20%;
         }
         .map_info .owner-info{
             width: 55%;

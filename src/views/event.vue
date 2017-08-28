@@ -175,10 +175,11 @@
                 iscroll = this.$refs.Scrollbar;                
                 iscroll.refresh();
             }, 550)
-            this.uiColorChange();            
+
             setTimeout(() => {
+                this.uiColorChange();
                 this.photosOwlInit();
-            }, 100)
+            }, 200)
 
             setTimeout(() => {
                 this.reviewsOwlInit();

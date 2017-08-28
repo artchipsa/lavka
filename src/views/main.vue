@@ -150,7 +150,11 @@
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 0}, {display: 'none'},{duration: 350})
                 setTimeout(() => {
-                    Velocity(document.querySelector('.logo'), {top: '50%', translateY: '-50%', translateX: '-50%'}, {duration: 350, complete: done})
+                    if ($(window).width() > 1367){
+                        Velocity(document.querySelector('.logo'), {top: '50%', translateY: '-50%', translateX: '-50%'}, {duration: 350, complete: done})
+                    } else {
+                        Velocity(document.querySelector('.logo'), {top: '48%', translateY: '-50%', translateX: '-50%'}, {duration: 350, complete: done})
+                    }
                     if ($(window).width() > 500){
                         Velocity(document.querySelector('.logo svg'), {width: 304, height: 128}, {duration: 350})
                     } else {
