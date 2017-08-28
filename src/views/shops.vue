@@ -467,7 +467,7 @@
             vertical-align: middle;
             width: 132px;
             height: 132px;
-            background-position: 50% 0;
+            // background-position: 50% 0;
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 50%;
@@ -559,7 +559,6 @@
             width: 110px;
             height: 110px;
             background-size: cover;
-            background-position: top;
         }
         .map_info .owner-info{
             width: 55%;
