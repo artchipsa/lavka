@@ -11,7 +11,9 @@
                     .distance {{ shop.distance }}
                     .street {{ shop.street }}
                     .owner
-                        .img(:style="{backgroundImage: shop.owner_pic}")
+                        //- (:style="{backgroundImage: shop.owner_pic}")
+                        .img
+                            img(:src="shop.img_pic")
                         .owner-info
                             .owner-name {{ shop.owner_name }}
                             .owner-status {{ shop.owner_status }}
@@ -131,53 +133,53 @@
                         ]
                     },
                     {
-        "featureType": "landscape.man_made",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "weight": "0.01"
-            },
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "weight": "0.01"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
+                        "featureType": "landscape.man_made",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "weight": "0.01"
+                            },
+                            {
+                                "hue": "#ff0000"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#000000"
+                            },
+                            {
+                                "weight": "0.01"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            },
+                            {
+                                "lightness": 21
+                            }
+                        ]
+                    },
                     {
                         "elementType": "labels.text.stroke",
                         "stylers": [
@@ -261,6 +263,7 @@
                         distance: 'В городе',
                         street: 'Красноярск ул. Дмитрия Мартынова, 18',
                         owner_pic: 'url(public/max.jpg)',
+                        img_pic: 'public/max.jpg',
                         owner_name: 'Максим Павлов',
                         owner_status: 'управляющий',
                         shop_story: 'Наш магазин откроется в Покровском по адресу ул. Дмитрия Мартынова, 18. Свежие фрукты и овощи, деревенское молоко, мясные деликатесы без добавок — мы готовим много вкусного и интересного.',
@@ -472,6 +475,12 @@
             background-repeat: no-repeat;
             border-radius: 50%;
             margin-right: 40px;
+            overflow: hidden;
+        }
+        .owner img{
+            display: inline-block;
+            vertical-align: middle;
+            width: 132px;
         }
         .owner-info{
             display: inline-block;
@@ -562,6 +571,9 @@
             background-size: 110px auto;
             overflow: hidden;
         }
+        .map_info .owner img{
+            width: 110px;
+        }
         .map_info .owner-info{
             width: 55%;
         }
@@ -587,7 +599,10 @@
         .map_info .close img{
             margin-right: 10px;
         }
-         .map_info .owner .img{
+        .map_info .owner img{
+            width: 100px;
+        }
+        .map_info .owner .img{
             width: 100px;
             height: 100px;
             margin-right: 20px;
