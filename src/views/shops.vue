@@ -559,6 +559,7 @@
             width: 110px;
             height: 110px;
             background-size: 100%;
+            background-position: 0px 0px;
         }
         .map_info .owner-info{
             width: 55%;
