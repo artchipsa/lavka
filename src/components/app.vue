@@ -756,7 +756,7 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
-            min-height: 610px;
+            height: 610px;
             text-decoration: none;
             img{
                 width: 100%;
