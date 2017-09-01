@@ -179,15 +179,12 @@
             setTimeout(() => {
                 this.uiColorChange();
                 this.photosOwlInit();
-            }, 200)
+            }, 300)
 
             setTimeout(() => {
                 this.reviewsOwlInit();
-                // this.owl_reviewers.trigger('refresh.owl.carousel');                       
             }, 350)
             
-
-
             $('.inner-right-sidebar .links-block a').click(function(e){
                 e.preventDefault();
                 let id = $(this).attr('href');

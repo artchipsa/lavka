@@ -29,7 +29,7 @@
                 owl: '',
                 events:[
                     {
-                        name: 'Открытие магазина в сентябре',
+                        name: 'Открытие магазина 8 сентября',
                         link: '/events/new-shop',
                         img: 'url(public/ev_img1.jpg)'
                     },

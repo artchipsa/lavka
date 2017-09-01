@@ -13,7 +13,7 @@
             .container
                 router-link(to="/events/new-shop").small-message
                     .tag Ближайшее событие
-                    span Открытие магазина в сентябре
+                    span Открытие магазина 8 сентрября
                 .left-info-block
                     .tag Кто мы
                     h1 супермакет натуральных продуктов

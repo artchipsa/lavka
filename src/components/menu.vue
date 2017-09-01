@@ -36,7 +36,7 @@
                         url: '/products',
                         second_nav:[
                             {
-                                name: 'проды и растения',
+                                name: 'плоды и растения',
                                 link: '/products/veges'
                             },
                             {

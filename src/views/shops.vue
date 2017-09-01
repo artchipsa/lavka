@@ -271,7 +271,7 @@
                         phones: ['209-18-00']
                     },
                     {
-                        icon: 'public/marker.png',
+                        icon: 'public/soon_marker.png',
                         pos: { lat: 56.0489806, lng: 92.91521560000001 },
                         distance: 'В городе',
                         street: 'Скоро открытие',
@@ -281,7 +281,7 @@
                         owner_status: 'управляющий'
                     },
                     {
-                        icon: 'public/marker.png',
+                        icon: 'public/soon_marker.png',
                         pos: { lat: 56.0367123, lng: 92.87089170000002 },
                         distance: 'В городе',
                         street: 'Скоро открытие',

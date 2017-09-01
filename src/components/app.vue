@@ -1,7 +1,10 @@
 <template lang="pug">
     .main
         router-link(to="/").mobile-logo
-            include ../assets/logo.svg            
+            include ../assets/logo.svg
+        .contacts-top
+            a(href="tel:+7 908 011 36 92") +7 908 011-36-92
+            a(href="mailto:t.levina@pkdiva.ru") t.levina@pkdiva.ru
         a(href="#" @click.prevent="showMenu")#menu
             span
         transition(name="modal")
@@ -242,6 +245,28 @@
     body{
         background-color: #D5DFDE;
     }
+
+    .contacts-top{
+        position: absolute;
+        z-index: 2;
+        top: 2.6%;
+        left: 8%;
+        &.white{
+            a{
+                color: #fff;
+            }
+        }
+        a{
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: $brown;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+
     .scroll-down{
         z-index: 2;
         position: absolute;
@@ -852,7 +877,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        background-color: transparentize($black, .4);
+        background-color: transparentize($black, .5);
     }
 
     .mobile-logo{
