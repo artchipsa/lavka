@@ -35,6 +35,7 @@
                                         .contacts
                                             a(href="tel:+7 929 338-23-26") +7 929 338-23-26
                                             a(href="mailto:maxpavlovval@mail.ru") maxpavlovval@mail.ru
+                                            a(href="https://www.instagram.com/maxmanfun/", target="_blank") instagram
                                 .item
                                     .img(style="background-image: url(public/ow1.jpg)")
                                     .content
@@ -42,7 +43,8 @@
                                         .rank Руководитель направления закупок и логистики
                                         .contacts
                                             a(href="tel:+7 923 354-25-27") +7 923 354-25-27
-                                            //- a(href="mailto:alexeynh@bk.ru") alexeynh@bk.ru
+                                            a(href="mailto:alexeynh@bk.ru") alexeynh@bk.ru
+                                            a(href="https://www.instagram.com/alekseikhrulkov/", target="_blank") instagram
                                 .item
                                     .img(style="background-image: url(public/ow2.jpg)")
                                     .content
@@ -51,6 +53,16 @@
                                         .contacts
                                             a(href="tel:8 913 532 80 00") +7 913 532-80-00
                                             a(href="mailto:ooo.diva@mail.ru") ooo.diva@mail.ru
+                                            a(href="https://www.instagram.com/verbitskii13/", target="_blank") instagram
+                                .item
+                                    .img(style="background-image: url(public/ow4.jpg)")
+                                    .content
+                                        .name Татьяна Левина
+                                        .rank Маркетолог проекта
+                                        .contacts
+                                            a(href="tel:+7 908 011 36 92") +7 908 011-36-92
+                                            a(href="mailto:t.levina@pkdiva.ru") t.levina@pkdiva.ru
+                                        .small-text Все пожелания и замечания отправляйте мне. Не одно обращение не оставлю без ответа
                 .left-info-block.mobile-top.big
                     .tag Кто мы
                     h1 супермакет натуральных продуктов
@@ -279,7 +291,7 @@
                 display: block;
             }
             .content{
-                padding: 30px;
+                padding: 20px 25px;
                 background-color: $light-cyan;
                 .name{
                     font-family: bebas;
@@ -302,7 +314,7 @@
                         color: $black;
                         opacity: .4;
                         text-decoration: none;
-                        display: inline-block;
+                        display: block;
                         margin-bottom: 5px;
                         &:hover{
                             text-decoration: underline;

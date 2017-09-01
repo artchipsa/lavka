@@ -74,6 +74,62 @@
             "ferma": "ИП Станкус",
             "category": "fish",
             "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/10.jpg)",
+            "link": "/owners/fermers/apk",
+            "name": "Балаков Александр Анатольевич",
+            "ferma": "ООО Алтайская продовольственная компания",
+            "category": "jams",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/11.jpg)",
+            "link": "/owners/fermers/fast_meat",
+            "name": "Галкин Алексей Николаевич",
+            "ferma": "«Быстро мясо»",
+            "category": "meats",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/13.jpg)",
+            "link": "/owners/fermers/khmilev",
+            "name": "Хмылев Дмитрий Юрьевич",
+            "ferma": "Частная сыроварня Хмылева",
+            "category": "milks",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/14.jpg)",
+            "link": "/owners/fermers/shur",
+            "name": "Шурыгина Е.В",
+            "ferma": "ИП Шурыгина Е.В",
+            "category": "jams",
+            "distance": "0"
+        },
+        {
+            "img": "url(public/fermers/15.jpg)",
+            "link": "/owners/fermers/Kugayan",
+            "name": "Куяганский маслосырзавод",
+            "ferma": "Куяганский маслосырзавод",
+            "category": "milks",
+            "distance": "2000"
+        },
+        {
+            "img": "url(public/fermers/16.jpg)",
+            "link": "/owners/fermers/tysh",
+            "name": "ООО «Мясной завод Алтая»",
+            "ferma": "ООО «Мясной завод Алтая»",
+            "category": "jams",
+            "distance": "2000"
+        },
+        {
+            "img": "url(public/fermers/17.jpg)",
+            "link": "/owners/fermers/triffan",
+            "name": "Трифонов Павел Анатольевич",
+            "ferma": "ИП Трифонов",
+            "category": "jams",
+            "distance": "2000"
         }
     ]
 }

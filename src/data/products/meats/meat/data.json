@@ -12,10 +12,17 @@
     "owners": {
         "tag": "частники",
         "owners_list": [{
-            "img": "url(public/fermers/01.jpg)",
-            "link": "/owners/fermers/verbickie",
-            "name": "Вербицкий Дмитрий Васильевич",
-            "ferma": "Вербицкие"
-        }]
+                "img": "url(public/fermers/01.jpg)",
+                "link": "/owners/fermers/verbickie",
+                "name": "Вербицкий Дмитрий Васильевич",
+                "ferma": "Вербицкие"
+            },
+            {
+                "img": "url(public/fermers/11.jpg)",
+                "link": "/owners/fermers/fast_meat",
+                "name": "Галкин Алексей Николаевич",
+                "ferma": "«Быстро мясо»"
+            }
+        ]
     }
 }

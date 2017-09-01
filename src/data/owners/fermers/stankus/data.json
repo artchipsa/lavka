@@ -21,6 +21,7 @@
         ]
     },
     "imgs": [
-        "url(public/fermers/9/1.jpg)"
+        "url(public/fermers/9/1.jpg)",
+        "url(public/fermers/9/2.jpg)"
     ]
 }

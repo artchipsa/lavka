@@ -11,7 +11,7 @@
             img.float(src="../assets/m5.png", alt="")
             img.float(src="../assets/m6.png", alt="")
             .container
-                a(href="#").small-message
+                router-link(to="/events/new-shop").small-message
                     .tag Ближайшее событие
                     span Открытие магазина в сентябре
                 .left-info-block

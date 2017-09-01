@@ -447,9 +447,10 @@
                        margin-bottom: 0px;
                    }
                    a{
-                       text-decoration: none;
-                       transition: all .35s;
-                       color: $side-menu;
+                        text-decoration: none;
+                        transition: all .35s;
+                        color: $side-menu;
+                        color: #848484;                       
                        &:hover{
                            color: $side-menu-hover;
                        }
@@ -763,7 +764,7 @@
                 display: block;
             }
             .img{
-                height: 60%;
+                height: 55%;
                 width: 100%;
                 background-size: cover;
                 background-position: 50% 0%;
@@ -771,7 +772,7 @@
             .content{
                 padding: 30px;
                 min-height: 40%;
-                height: 40%;
+                height: 45%;
                 background-color: $light-cyan;
                 .name{
                     font-family: bebas;
@@ -786,6 +787,11 @@
                     color: $black;
                     opacity: .4;
                     margin-bottom: 64px;
+                }
+                .small-text{
+                    font-size: 14px;
+                    color: $black;
+                    opacity: .4;
                 }
                 .contacts{
                     margin-bottom: 20px;

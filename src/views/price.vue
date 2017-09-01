@@ -8,68 +8,27 @@
                     h1 вы можете ознакомиться #[br] с ценами  на товары
                 .center-text-block.hover-overflow
                     h2 Для #[br] натурального #[br]  #[span очень #[br] недорого]
-                    table(cellspacing="0")
-                        tr
+                    table(cellspacing="0" v-if="prices && Object.keys(prices).length")
+                        tr(v-for="goods in prices.prices")
                             td
-                                p.name Йогурт
-                                span 1 шт
+                                p.name {{goods.name}}
+                                span {{goods.amount}}
                             td
-                                p.price 55 Р
-                        tr
-                            td
-                                p.name Окорок Тамбовский
-                                span 1 кг
-                            td
-                                p.price 550 Р
-                        tr
-                            td
-                                p.name Творог обезжиренный 1.5%
-                                span 1 кг
-                            td
-                                p.price 270 Р
-                        tr
-                            td
-                                p.name Яйцо деревенское
-                                span 10 шт
-                            td
-                                p.price 66 Р
-                        tr
-                            td
-                                p.name Колбаса Докторская
-                                span 1 кг
-                            td
-                                p.price 465 Р
-                        tr
-                            td
-                                p.name Шея свиная
-                                span 1 кг
-                            td
-                                p.price 380 Р
-                        tr
-                            td
-                                p.name Рулет Куриный
-                                span 1 кг
-                            td
-                                p.price 371 Р
-                        tr
-                            td
-                                p.name Томаты (слива) 
-                                span 1 кг
-                            td
-                                p.price 150 Р
-
+                                p.price {{goods.price}}
 </template>
 
 <script>
 
     import floats from '../components/float.vue';
+    import axios from 'axios';
 
     export default {
         props:['flow', 'links'],
         data(){
             return{
                 color: '#D5DFDE',
-                _flow: ''
+                _flow: '',
+                prices: {}
             }
         },
         beforeRouteLeave(to, from, next){
@@ -143,6 +102,17 @@
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 350, delay: 170});
                 }
             },
+        },
+        created(){
+            const path = this.$route.path;
+            const data_src = 'src/data' + path + '/data.json';
+            
+            axios.get(data_src).
+                then(response => {
+                    this.prices = response.data;
+                }).catch(error => {
+                    console.log(error);
+                });
         }
     }
 </script>

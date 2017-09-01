@@ -17,6 +17,10 @@
         "description": "Основным принципом которой является приготовление продукции только из натуральных ингридиентов по рецептам, собранным со всего мира."
     },
     "imgs": [
-        "url(public/fermers/2/1.jpg)"
+        "url(public/fermers/2/1.jpg)",
+        "url(public/fermers/2/2.jpg)",
+        "url(public/fermers/2/3.jpg)",
+        "url(public/fermers/2/4.jpg)",
+        "url(public/fermers/2/5.jpg)"
     ]
 }

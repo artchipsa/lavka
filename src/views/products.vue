@@ -171,6 +171,7 @@
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
+                        Velocity($('.product-carousel .item img'), {width: '200px'}, {duration: 350, delay: 150})
                         if ($(window).width() < 500){
                             Velocity($('.product-carousel'),{opacity: 1, translateX: '-50%', translateY:'-50%'},{duration: 350});
                         }
@@ -184,6 +185,7 @@
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350})
                         Velocity(document.querySelector('.product-carousel'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 350, complete: done});
                         Velocity(document.querySelector('.center-plate'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 200});
+                        Velocity($('.product-carousel .item img'), {width: '200px'}, {duration: 350, delay: 150})
                         Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 350});
                     }, 650);
                 } else {
@@ -193,6 +195,7 @@
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
+
                     }, 350);
                 }
             },
@@ -253,7 +256,6 @@
                 let links = document.querySelectorAll('.category-link');
                 let elem = event.target;
                 let index = [].indexOf.call(links, elem);
-                console.log(index);
                 this.owl.trigger('to.owl.carousel', [index]);
             }
         },
@@ -267,7 +269,6 @@
                 var sections = document.querySelectorAll('.category-link');
                 this.productText = this.products[index].name;
                 this.productLink = this.products[index].link;
-                console.log(this.products[index].link);
                 sections.forEach((element) => {
                     element.classList.remove('active');
                    if (element.dataset.section == this.products[index].category){
