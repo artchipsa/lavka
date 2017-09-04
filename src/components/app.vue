@@ -160,8 +160,7 @@
                                     self.uiColorChange();
                                 } 
                             }
-                        }, 50)
-					   
+                        }, 1)
 					   self.lastAnimationTouch = timeNow;	
 					}
 				}
@@ -261,6 +260,7 @@
             margin-bottom: 5px;
             font-size: 16px;
             color: $brown;
+            text-decoration: none;
             &:last-child{
                 margin-bottom: 0px;
             }

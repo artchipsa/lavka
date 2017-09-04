@@ -5,7 +5,7 @@
             .container
                 .left-info-block.mobile-top.big
                     .tag цены
-                    h1 вы можете ознакомиться #[br] с ценами  на товары
+                    h1 Цены на самые ходовые продукты
                 .center-text-block.hover-overflow
                     h2 Для #[br] натурального #[br]  #[span очень #[br] недорого]
                     table(cellspacing="0" v-if="prices && Object.keys(prices).length")
@@ -244,6 +244,11 @@
     @media (max-width: 469px){
 
         .center-text-block{
+        }
+        .center-text-block{
+            width: 95%;
+            left: 50%;
+            top: 80%;
             height: 80%;
         }
         .center-text-block.hover-overflow{

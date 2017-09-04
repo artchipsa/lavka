@@ -6,7 +6,7 @@
                     router-link.big-link(:to="link.url") {{ link.name }}
                     ul.second-nav
                         li(v-for="nav in link.second_nav")
-                            router-link(:to="nav.link") {{ nav.name }}
+                            router-link(:to="nav.link" append) {{ nav.name }}
         .socials-block
                 ul
                     li(v-for="social in socials")

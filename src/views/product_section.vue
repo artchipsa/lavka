@@ -80,6 +80,19 @@
         mounted(){
             const iscroll = this.$refs.Scrollbar;            
             iscroll.refresh();
+        },
+        updated(){
+            const path = this.$route.path;
+            const data_src = 'src/data' + path + '/data.json';
+            
+            axios.get(data_src).
+                then(response => {
+                    this.prod_data = response.data;
+                    const iscroll = this.$refs.Scrollbar;            
+                    iscroll.refresh();
+                }).catch(error => {
+                    console.log(error);
+                });
         }
 
     }

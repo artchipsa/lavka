@@ -145,7 +145,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     //vars
     @import 'src/assets/styles/settings.scss';
 

@@ -94,12 +94,12 @@
                     if( offset >= top_edge & offset <= bottom_edge){
                         if ($(this).data('change')){
                             Velocity($('.background'), 'stop');
-                            Velocity($('.background'), {opacity: 0}, {duration: 350}, {displa: 'none'})
+                            Velocity($('.background'), {opacity: 0}, {duration: 350, easing: 'easeInOutSine'}, {displa: 'none'})
                             self.over_show = false;
                             self.uiColorChange();
                         } else {
                             Velocity($('.background'), 'stop');                            
-                            Velocity($('.background'), {opacity: 1}, {duration: 350}, {displa: 'block'})
+                            Velocity($('.background'), {opacity: 1}, {duration: 350, easing: 'easeInOutSine'}, {displa: 'block'})
                             self.over_show = true;
                             self.uiColorChange();                   
                         }

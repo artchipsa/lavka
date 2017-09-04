@@ -44,7 +44,7 @@
                     .tag события
                     h1 {{event_data.description.name}}
                 .sharing
-                   social-sharing(url="http://localhost:8080/#/events/new-shop" inline-template)
+                   social-sharing(inline-template)
                     div
                         .text поделиться
                         network(network="facebook")
