@@ -160,7 +160,7 @@
                                     self.uiColorChange();
                                 } 
                             }
-                        }, 200)
+                        }, 50)
 					   
 					   self.lastAnimationTouch = timeNow;	
 					}
@@ -705,7 +705,7 @@
                    a{
                        text-decoration: none;
                        transition: all .35s;
-                       color: $side-menu;
+                       color: #848484;
                        &:hover{
                            color: $side-menu-hover;
                        }
