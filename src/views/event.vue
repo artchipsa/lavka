@@ -2,7 +2,7 @@
     transition(v-on:before-enter="beforeEnter" v-on:before-leave="beforeLeave" v-on:enter="enter" v-on:leave="leave" mode="out-in" v-bind:css="false" appear)
         .view(:style="{backgroundColor: color}")
             .inner-right-sidebar
-                router-link(:to="from").close
+                router-link(to="/events").close
                     .icon
                         include ../assets/close.svg
                     span назад
@@ -283,6 +283,15 @@
         .scroll-view{
             p{
                 width: 80%;
+            }
+            ul{
+                list-style: none;
+                padding: 0px;
+                font-size: 18px;
+                margin-bottom: 40px;
+                li{
+                    margin-bottom: 10px;
+                }
             }
         }
     }

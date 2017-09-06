@@ -31,12 +31,12 @@
                     {
                         name: 'Открытие магазина 8 сентября',
                         link: '/events/new-shop',
-                        img: 'url(public/ev_img1.jpg)'
+                        img: 'url(public/e1.jpg)'
                     },
                     {
                         name: 'фестиваль «зеленый»',
                         link: '/events/zeleniy',
-                        img: 'url(public/e1.jpg)'
+                        img: 'url(public/ev_img2.jpg)'
                     }
                 ],
                 _this: '',
