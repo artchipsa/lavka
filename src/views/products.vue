@@ -163,11 +163,13 @@
                 Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 10});
             },
             enter(el, done){
+                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
+                    duration: 10 });
                 // if ($(window).width() < 500){
                 //     Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
                 // }
                 if (this.flow == 'forward'){
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -181,7 +183,7 @@
                         }
                     }, 550);
                 } else if (this.flow == 'back'){
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -195,7 +197,7 @@
                         Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 350});
                     }, 650);
                 } else {
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
