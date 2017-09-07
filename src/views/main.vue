@@ -141,10 +141,10 @@
             },
             beforeLeave(el){
                 el.style.zIndex = 1;
-                if ($(window).width() < 500){
-                    Velocity(document.querySelector('.logo svg'), {width: 120, height: 68}, {duration: 350})
-                    Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10});
-                }                
+                // if ($(window).width() < 500){
+                //     Velocity(document.querySelector('.logo svg'), {width: 120, height: 68}, {duration: 350})
+                //     Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10});
+                // }                
             },
             enter(el, done){    
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
@@ -170,12 +170,12 @@
                 clearInterval(this.interval);
                 document.querySelector('body').style.backgroundColor = '#FAF6EB';
                 let elems = document.querySelectorAll('.float');
-                if ($(window).width() > 500){
-                    Velocity(document.querySelector('.logo'), {top: 28, translateY: '0%', translateX: '-50%'}, {duration: 350})
-                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 350})
-                } else {
-                    Velocity(document.querySelector('.logo'), {opacity: 0}, {duration: 350})
-                }                
+                // if ($(window).width() > 500){
+                //     Velocity(document.querySelector('.logo'), {top: 28, translateY: '0%', translateX: '-50%'}, {duration: 350})
+                //     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 350})
+                // } else {
+                //     Velocity(document.querySelector('.logo'), {opacity: 0}, {duration: 350})
+                // }                
                 Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 1}, {display: 'block'},{duration: 350})
                 var left;
