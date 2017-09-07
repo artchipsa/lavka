@@ -130,7 +130,8 @@
                 }
                 if (this.flow == ''){
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
-                    Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
+                    // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
+                    $('.logo svg g use').css('fill', '#ffffff');
                     Velocity(document.querySelector('.logo-text'), {color: '#ffffff'}, {display: 'block'},{duration: 350})
                     Velocity(document.querySelectorAll('.left-info-block'), {translateX: '0%'}, { duration: 350, delay: 450});
                     Velocity(document.querySelectorAll('.center-text-block'), {translateY: '0%', translateX: '-50%'}, {duration: 450, delay: 600}); 
@@ -139,7 +140,8 @@
                     }, 600);
                 } else {
                     Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
-                    Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
+                    // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#ffffff'}, {duration: 350})
+                    $('.logo svg g use').css('fill', '#ffffff');
                     Velocity(document.querySelector('.logo-text'), {color: '#ffffff'}, {display: 'block'},{duration: 350})
                     setTimeout(() => {
                         Velocity(el, {translateY: '0%'}, {duration: 450})
