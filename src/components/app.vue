@@ -167,11 +167,7 @@
 			}
         },
         mounted(){
-            
-            setTimeout(() => {
-                alert($('.logo svg').css('display'));
-            }, 2000)
-
+        
             this.uiColorChange();
             var self = this;
 

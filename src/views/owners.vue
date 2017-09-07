@@ -120,6 +120,9 @@
                     Velocity($(el).find('.center-text-block'), {translateY: '-400%', translateX: '-50%'}, {duration: 10})
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
+                if ($(window).width() > 700){
+                     Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10})
+                }
             },
             beforeLeave(el){
                 clearInterval(this.interval)                

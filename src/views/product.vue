@@ -60,6 +60,9 @@
                 setTimeout(() => {
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }, 250)
+                if ($(window).width() > 700){
+                     Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10})
+                }
             },
             beforeLeave(el){
                 

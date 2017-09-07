@@ -316,6 +316,9 @@
             beforeEnter(el){
                 clearInterval(this.interval)
                 Velocity($(el).find('.count'), {translateX: '-150%'}, { duration: 10});
+                if ($(window).width() > 700){
+                     Velocity(document.querySelector('.logo'), {opacity: 1}, {duration: 10})
+                }
             },
             beforeLeave(){
                 clearInterval(this.interval)                
