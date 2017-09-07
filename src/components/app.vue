@@ -169,8 +169,8 @@
         mounted(){
             
             setTimeout(() => {
-                alert($('.logo').css());
-            }, 1000)
+                alert($('.logo').css('display'));
+            }, 2000)
 
             this.uiColorChange();
             var self = this;
@@ -965,9 +965,6 @@
 
     }
     @import 'src/assets/styles/responsive.scss';    
-    .landscape{
-        display: none;
-    }
     @media only screen
       and (min-device-width: 321px)
       and (max-device-width: 736px)
