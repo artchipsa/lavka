@@ -147,7 +147,7 @@
                 }                
             },
             enter(el, done){    
-                Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
+                // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#FAF6EB'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 0}, {display: 'none'},{duration: 350})
                 setTimeout(() => {
                     if ($(window).width() > 1367){
@@ -176,7 +176,7 @@
                 } else {
                     Velocity(document.querySelector('.logo'), {opacity: 0}, {duration: 350})
                 }                
-                Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
+                // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                 Velocity(document.querySelector('.logo-text'), {opacity: 1}, {display: 'block'},{duration: 350})
                 var left;
                 if ($(window).width() < 1367 && $(window).width() > 1024){
