@@ -150,7 +150,7 @@
                     Velocity($(el).find('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 10});
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
-                Velocity($('.logo svg'), {opacity: 1, width: 125, height: 70}, {display: 'inline-block'}, {
+                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
                     duration: 10 });
                 if ($(window).width() < 500){
                     Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 10});
@@ -163,7 +163,7 @@
                 Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 10});
             },
             enter(el, done){
-                Velocity($('.logo svg'), {opacity: 1, width: 125, height: 70}, {display: 'inline-block'}, {
+                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
                     duration: 10 });
                 // if ($(window).width() < 500){
                 //     Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
@@ -292,6 +292,11 @@
 <style lang="scss">
     //vars
     @import 'src/assets/styles/settings.scss';
+
+    .logo svg{
+        width: 125px!important;
+        height: 70px!important;
+    }
 
     .main-logo{
         position: absolute;
