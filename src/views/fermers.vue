@@ -27,7 +27,7 @@
 				.left-info-block.mobile-top.big
 					.tag Частники
 					h1 Каталог частников
-					span 40 поставщиков #[br] 234 видов продукции 
+					span 40 поставщиков 234 видов продукции 
 </template>
 
 <script>
@@ -344,7 +344,7 @@
         .filter-block {
             width: 75%;
             margin: 0 auto;
-            margin-top: 30px;
+            margin-top: 50px;
             margin-bottom: 40px;
         }
         .v-select .selected-tag {
@@ -360,7 +360,6 @@
     }
 
     @media (max-width: 469px){
-
         .filter-block{
             width: 94%;
         }

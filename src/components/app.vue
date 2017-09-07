@@ -962,5 +962,71 @@
     }
     @import 'src/assets/styles/responsive.scss';    
 
+    @media only screen
+      and (min-device-width: 321px)
+      and (max-device-width: 736px)
+      and (min-aspect-ratio: 13/9)
+      and (orientation: landscape) {
+      	.main{
+			display: none;
+		}
+		.landscape{
+			z-index: 2;
+			display: block;
+			position: absolute;
+			top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+			transform: translate(-50%, -50%);
+			color: $brown;
+			font-size: 4.2vw;
+            text-align: center;
+            p{
+                margin: 0px;
+                text-transform: uppercase;
+                font-weight: 800;
+                position: absolute;
+                width: 60%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .floats-block{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                .float{
+                    position: absolute;
+                    z-index: 0;
+                    width: 130px;
+                    &:nth-child(1){
+                        top: 22%;
+                        left: -2%;
+                    }
+                    &:nth-child(2){
+                        top: 2%;
+                        left: 17%;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(3){
+                        top: 77%;
+                        right: 20%;
+                    }
+                    &:nth-child(4){
+                        top: 25%;
+                        left: 81%;
+                        transform: rotate(-57deg);
+                    }
+                    &:nth-child(5){
+                        top: 92%;
+                        left: 17%;
+                    }
+                }
+            }
+		}
+      }
+
 </style>
 

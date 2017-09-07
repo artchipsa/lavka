@@ -149,7 +149,11 @@
                 });
                 this.uiColorChange();
                 iscroll = this.$refs.Scrollbar;
+                if ($(window).width() < 1025){
+                    $('.overlay').addClass('dark');
+                }
             }, 500)
+
 
             $('.inner-right-sidebar .links-block a').click(function(e){
                 e.preventDefault();
@@ -227,6 +231,12 @@
             }
         }
     }
+
+    //  @media (max-width: 1025px){
+    //     .overlay{
+    //         opacity: 0.9!important;
+    //     }
+    //  }
 
     @media (max-width: 769px){
         .scroll-view section#photo{

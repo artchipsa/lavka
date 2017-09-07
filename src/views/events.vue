@@ -14,7 +14,7 @@
                             .tag события
                             h1 {{ event.name }}
                             router-link(:to="event.link") подробнее
-                        .count 23.06.2017
+                        .count {{event.data}}
                     .overlay
 
 
@@ -31,12 +31,14 @@
                     {
                         name: 'Открытие магазина 8 сентября',
                         link: '/events/new-shop',
-                        img: 'url(public/e1.jpg)'
+                        img: 'url(public/e1.jpg)',
+                        data: '06.09.2017'
                     },
                     {
                         name: 'фестиваль «зеленый»',
                         link: '/events/zeleniy',
-                        img: 'url(public/ev_img2.jpg)'
+                        img: 'url(public/ev_img2.jpg)',
+                        data: '23.06.2017'                        
                     }
                 ],
                 _this: '',
