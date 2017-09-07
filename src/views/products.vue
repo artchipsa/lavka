@@ -173,7 +173,7 @@
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
-                        $('.logo svg g use').attr('fill', '#312217');
+                        $('.logo svg g use').css('fill', '#312217');
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
                         if ($(window).width() > 1367){
                             Velocity($('.product-carousel .item img'), {width: '200px'}, {duration: 350, delay: 150})
@@ -187,7 +187,7 @@
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
-                        $('.logo svg g use').attr('fill', '#312217');
+                        $('.logo svg g use').css('fill', '#312217');
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350})
                         Velocity(document.querySelector('.product-carousel'), {translateY: '-50%', translateX: '-50%'}, {duration: 350, delay: 350, complete: done});
@@ -202,7 +202,7 @@
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
-                        $('.logo svg g use').attr('fill', '#312217');
+                        $('.logo svg g use').css('fill', '#312217');
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
 
