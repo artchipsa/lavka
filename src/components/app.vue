@@ -168,6 +168,9 @@
         },
         mounted(){
             
+
+            alert($('.logo').css());
+
             this.uiColorChange();
             var self = this;
 
