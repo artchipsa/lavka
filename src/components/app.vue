@@ -45,17 +45,17 @@
         data(){
             return{
                 socials: [
-                    {
+                     {
                         icon: 'fa-instagram',
-                        url: 'https://www.instagram.com/lavochka_net/'
+                        url: 'https://www.instagram.com/lavochkamarket/'
                     },
                     {
                         icon: 'fa-facebook-official',
-                        url: 'https://www.facebook.com/lavochka.net'
+                        url: 'https://www.facebook.com/lavochkamarket'
                     },
                     {
                         icon: 'fa-vk',
-                        url: 'https://vk.com/lavochka_net'
+                        url: 'https://vk.com/lavochkamarket'
                     }
                 ],
                 links:[
