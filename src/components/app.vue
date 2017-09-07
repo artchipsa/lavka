@@ -11,6 +11,8 @@
             menulist(v-show="show_menu" show_menu="show_menu")
         .logo.main-logo
             include ../assets/logo.svg
+            //- .small-logo
+            //-     include ../assets/logo.svg    
             p.logo-text супермаркет отборных продуктов    
         aside.right-menu
             .handler
