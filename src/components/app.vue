@@ -169,7 +169,7 @@
         mounted(){
             
             setTimeout(() => {
-                alert($('.logo svg').css('opacity'));
+                alert($('.logo svg').css('display'));
             }, 2000)
 
             this.uiColorChange();
