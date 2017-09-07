@@ -150,8 +150,7 @@
                     Velocity($(el).find('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 10});
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
-                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
-                    duration: 10 });
+                // Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, { duration: 10 });
                 if ($(window).width() < 500){
                     Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 10});
                 }
@@ -163,16 +162,16 @@
                 Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 10});
             },
             enter(el, done){
-                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
-                    duration: 10 });
+                // Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
+                //     duration: 10 });
                 // if ($(window).width() < 500){
                 //     Velocity(document.querySelector('.logo'), {opacity: 0}, {display: 'none'}, {duration: 1})
                 // }
                 if (this.flow == 'forward'){
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
-                        // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
+                        Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
                         Velocity(document.querySelector('.logo-text'), {color: '#312217'}, {display: 'block'},{duration: 350})
                         Velocity(document.querySelector('.bottom-panel'), { bottom: '0px' }, { duration: 350, delay: 350, complete: done})
                         if ($(window).width() > 1367){
@@ -183,7 +182,7 @@
                         }
                     }, 550);
                 } else if (this.flow == 'back'){
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -197,7 +196,7 @@
                         Velocity(document.querySelector('.left-info-block'), {translateX: '-0%'}, { duration: 350});
                     }, 650);
                 } else {
-                    // Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
+                    Velocity(document.querySelector('.logo svg'), {width: 125, height: 70}, {duration: 10})
                     setTimeout(function(){
                         Velocity(el, {opacity: 1, zIndex: 'initial'}, {duration: 350})
                         // Velocity(document.querySelectorAll('.logo svg g use'), {fill: '#312217'}, {duration: 350})
@@ -293,10 +292,10 @@
     //vars
     @import 'src/assets/styles/settings.scss';
 
-    .logo svg{
-        width: 125px!important;
-        height: 70px!important;
-    }
+    // .logo svg{
+    //     width: 125px!important;
+    //     height: 70px!important;
+    // }
 
     .main-logo{
         position: absolute;
