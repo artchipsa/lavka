@@ -1,5 +1,5 @@
 <template lang="pug">
-    transition(v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" v-on:before-leave="beforeLeave" mode="out-in" v-bind:css="false" appear)
+    transition(v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" v-on:before-leave="beforeLeave" mode="out-in" v-bind:css="true" appear)
         .view(:style="{backgroundColor: color}")
             img.center-plate(src="../assets/woodplate.png", alt="")
             .owl-carousel.product-carousel
@@ -150,6 +150,8 @@
                     Velocity($(el).find('.center-plate'), {translateY: '-300%', translateX: '-50%'}, {duration: 10});
                     Velocity($(el).find('.left-info-block'), {translateX: '-150%'}, { duration: 10});
                 }
+                Velocity($('.logo svg'), {opacity: 1}, {display: 'inline-block'}, {
+                    duration: 10 });
                 if ($(window).width() < 500){
                     Velocity($('.product-carousel'),{opacity: 0, translateY: '-50%', translateX:'-50%'},{duration: 10});
                 }
