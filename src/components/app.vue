@@ -306,6 +306,7 @@
         transform: translateX(-50%);
         z-index: 2;
         text-align: center;
+    
         &.white{
             svg g use {
                 fill: #fff!important;
@@ -315,6 +316,7 @@
             }
         }
         svg g use {
+            transform: all  .35s;
             fill: #FAF6EB;
         }
     }
